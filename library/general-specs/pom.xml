@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>bigfoot.framework.library</groupId>
+        <artifactId>library</artifactId>
+        <version>0.1.1.Alpha</version>
+    </parent>
+
+    <artifactId>general-specs</artifactId>
+    <packaging>pom</packaging>
+    <name>Bigfoot Framework :: Library :: General Specifications</name>
+    <description>常用Specifications类库组件集合，Geronimo、ServiceMix项目中提供的Bundle化的规范集合</description>
+    <properties>
+        <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
+    </properties>
+
+    <dependencies>
+        <!-- Karaf deps -->
+        <dependency>
+            <groupId>org.apache.karaf.features</groupId>
+            <artifactId>org.apache.karaf.features.core</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- javax activation 1.1 -->
+        <dependency>
+            <groupId>${javax.activation.bundle.groudId}</groupId>
+            <artifactId>${javax.activation.bundle.artifactId}</artifactId>
+            <version>${javax.activation.bundle.version}</version>
+        </dependency>
+
+        <!-- javax inject -->
+        <dependency>
+            <groupId>${javax.inject.bundle.groudId}</groupId>
+            <artifactId>${javax.inject.bundle.artifactId}</artifactId>
+            <version>${javax.inject.bundle.version}</version>
+        </dependency>
+
+        <!-- Annotation spec 1.1 API -->
+        <dependency>
+            <groupId>${javax.annotation.bundle.groudId}</groupId>
+            <artifactId>${javax.annotation.bundle.artifactId}</artifactId>
+            <version>${javax.annotation.bundle.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-el_2.2_spec</artifactId>
+            <version>1.0.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-el_1.0_spec</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.karaf.tooling</groupId>
+                <artifactId>karaf-maven-plugin</artifactId>
+                <configuration>
+                    <startLevel>30</startLevel>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>compile</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>features-generate-descriptor</goal>
+                        </goals>
+                        <configuration>
+                            <addBundlesToPrimaryFeature>false</addBundlesToPrimaryFeature>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-artifacts</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>attach-artifact</goal>
+                        </goals>
+                        <configuration>
+                            <artifacts>
+                                <artifact>
+                                    <file>target/feature/feature.xml</file>
+                                    <classifier>features</classifier>
+                                    <type>xml</type>
+                                </artifact>
+                            </artifacts>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    
+</project>

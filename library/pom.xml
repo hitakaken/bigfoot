@@ -18,5 +18,16 @@
     <name>Bigfoot Framework :: Library</name>
     <description>Bigfoot Framework 类库组件集合</description>
 
-    
+    <modules>
+        <!-- Generate Utilities -->
+        <module>core-commons</module>
+        <!-- General Specifications-->
+        <module>general-specs</module>
+        <!-- Apache Commons-->
+        <module>apache-commons</module>
+        <!-- Google Open Source Utilities-->
+        <module>google-commons</module>
+        <!-- General Database Drivers-->
+        <module>general-drivers</module>
+    </modules>
 </project>

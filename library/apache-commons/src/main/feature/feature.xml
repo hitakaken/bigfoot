@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+      Licensed to the Apache Software Foundation (ASF) under one or more
+      contributor license agreements.  See the NOTICE file distributed with
+      this work for additional information regarding copyright ownership.
+      The ASF licenses this file to You under the Apache License, Version 2.0
+      (the "License"); you may not use this file except in compliance with
+      the License.  You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+      Unless required by applicable law or agreed to in writing, software
+      distributed under the License is distributed on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+      See the License for the specific language governing permissions and
+      limitations under the License.
+-->
+<features name="library-apache-commons-${project.version}"
+          xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="
+          http://karaf.apache.org/xmlns/features/v1.2.0 http://karaf.apache.org/xmlns/features/v1.2.0">
+    <feature name="commons-bcel"
+             description="Byte Code Engineering Library - analyze, create, and manipulate Java class files"
+             version="${apache.commons.bcel.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-bcel/
+            The Byte Code Engineering Library (Apache Commons BCEL™) is intended to give users a convenient way to analyze, create, and manipulate (binary) Java class files (those ending with .class). Classes are represented by objects which contain all the symbolic information of the given class: methods, fields and byte code instructions, in particular.
+            Such objects can be read from an existing file, be transformed by a program (e.g. a class loader at run-time) and written to a file again. An even more interesting application is the creation of classes from scratch at run-time. The Byte Code Engineering Library (BCEL) may be also useful if you want to learn about the Java Virtual Machine (JVM) and the format of Java .class files.
+            BCEL contains a byte code verifier named JustIce, which usually gives you much better information about what's wrong with your code than the standard JVM message.
+            BCEL is already being used successfully in several projects such as compilers, optimizers, obsfuscators, code generators and analysis tools. Unfortunately there hasn't been much development going on over the past few years. Feel free to help out or you might want to have a look into the ASM project at objectweb.
+        </details>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.bcel/${apache.commons.bcel.bundle.version}</bundle>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jakarta-regexp/${jakarta-regexp.bundle.version}</bundle>
+    </feature>
+
+    <feature name="commons-beanutils"
+             description="Easy-to-use wrappers around the Java reflection and introspection APIs"
+             version="${apache.commons.beanutils.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-beanutils/
+            Building scripting languages that interact with the Java object model (such as the Bean Scripting Framework).
+            Building template language processors for web presentation and similar uses (such as JSP or Velocity).
+            Building custom tag libraries for JSP and XSP environments (such as Jakarta Taglibs, Struts, Cocoon).
+            Consuming XML-based configuration resources (such as Ant build scripts, web application deployment descriptors, Tomcat's server.xml file).
+        </details>
+        <feature>commons-collections</feature>
+        <feature>commons-logging</feature>
+        <bundle>mvn:commons-beanutils/commons-beanutils/${apache.commons.beanutils.version}</bundle>
+    </feature>
+
+    <feature name="commons-chain"
+             description="Chain of Responsibility pattern implemention."
+             version="${apache.commons.chain.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-chain/
+            There are many different ways programmers organize processing logic within an application. Often, the difference between an elegant architecture and a muddled ball-of mud is how control flows from one process to another. To realize and retain elegance, we must organize complex, multi-step processes so that they are easy to discover and change.
+        </details>
+        <bundle>mvn:commons-chain/commons-chain/${apache.commons.chain.version}</bundle>
+    </feature>
+
+    <feature name="commons-cli"
+             description="Command Line arguments parser."
+             version="${apache.commons.cli.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-cli/
+            The Apache Commons CLI library provides an API for parsing command line options passed to programs. It's also able to print help messages detailing the options available for a command line tool.
+        </details>
+        <bundle>mvn:commons-cli/commons-cli/${apache.commons.cli.version}</bundle>
+    </feature>
+
+    <feature name="commons-codec"
+             description="General encoding/decoding algorithms (for example phonetic, base64, URL)."
+             version="${apache.commons.codec.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-codec/
+            Apache Commons Codec (TM) software provides implementations of common encoders and decoders such as Base64, Hex, Phonetic and URLs.
+        </details>
+        <bundle>mvn:commons-codec/commons-codec/${apache.commons.codec.version}</bundle>
+    </feature>
+
+    <feature name="commons-collections"
+             description="Extends or augments the Java Collections Framework."
+             version="${apache.commons.collections.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-collections/
+            The Java Collections Framework was a major addition in JDK 1.2. It added many powerful data structures that accelerate development of most significant Java applications. Since that time it has become the recognised standard for collection handling in Java.
+        </details>
+        <bundle>mvn:commons-collections/commons-collections/${apache.commons.collections.version}</bundle>
+    </feature>
+    <feature name="commons-collections4"
+             description="Extends or augments the Java Collections Framework."
+             version="${apache.commons.collections4.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-collections/
+            The Java Collections Framework was a major addition in JDK 1.2. It added many powerful data structures that accelerate development of most significant Java applications. Since that time it has become the recognised standard for collection handling in Java.
+        </details>
+        <bundle>mvn:org.apache.commons/commons-collections4/${apache.commons.collections4.version}</bundle>
+    </feature>
+
+    <feature name="commons-compress"
+             description="Defines an API for working with tar, zip and bzip2 files."
+             version="${apache.commons.compress.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-compress/
+            The Apache Commons Compress library defines an API for working with ar, cpio, Unix dump, tar, zip, gzip, XZ, Pack200, bzip2, 7z, arj, lzma, snappy, DEFLATE and Z files.
+        </details>
+        <bundle>mvn:org.apache.commons/commons-compress/${apache.commons.compress.version}</bundle>
+    </feature>
+
+    <feature name="commons-configuration"
+             description="Reading of configuration/preferences files in various formats."
+             version="${apache.commons.configuration.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-configuration/
+            The Commons Configuration software library provides a generic configuration interface which enables a Java application to read configuration data from a variety of sources.
+        </details>
+        <feature>commons-lang</feature>
+        <feature>commons-logging</feature>
+        <bundle>mvn:commons-configuration/commons-configuration/${apache.commons.configuration.version}</bundle>
+    </feature>
+
+    <feature name="commons-daemon"
+             description="Alternative invocation mechanism for unix-daemon-like java code."
+             version="${apache.commons.daemon.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-daemon/
+            Daemon is made of 2 parts. One written in C that makes the interface to the operating system and the other in Java that provides the Daemon API.
+            Both Win32 and UNIX like platforms are supported. For Win32 platforms use procrun. For UNIX like platforms use jsvc.
+        </details>
+        <bundle>mvn:commons-daemon/commons-daemon/${apache.commons.daemon.version}</bundle>
+    </feature>
+
+    <feature name="commons-dbcp"
+             description="Database connection pooling services."
+             version="${apache.commons.dbcp.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-dbcp/
+            There are several Database Connection Pools already available, both within Apache products and elsewhere. This Commons package provides an opportunity to coordinate the efforts required to create and maintain an efficient, feature-rich package under the ASF license.
+        </details>
+        <feature>commons-pool</feature>
+        <bundle>mvn:commons-dbcp/commons-dbcp/${apache.commons.dbcp.version}</bundle>
+    </feature>
+    <feature name="commons-dbcp2"
+             description="Database connection pooling services."
+             version="${apache.commons.dbcp2.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-dbcp/
+            There are several Database Connection Pools already available, both within Apache products and elsewhere. This Commons package provides an opportunity to coordinate the efforts required to create and maintain an efficient, feature-rich package under the ASF license.
+        </details>
+        <feature>commons-pool2</feature>
+        <feature>commons-logging</feature>
+        <bundle>mvn:org.apache.commons/commons-dbcp2/${apache.commons.dbcp2.version}</bundle>
+    </feature>
+
+    <feature name="commons-dbutils"
+             description="JDBC helper library."
+             version="${apache.commons.dbutils.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-dbutils/
+            The Commons DbUtils library is a small set of classes designed to make working with JDBC easier. JDBC resource cleanup code is mundane, error prone work so these classes abstract out all of the cleanup tasks from your code leaving you with what you really wanted to do with JDBC in the first place: query and update data.
+        </details>
+        <bundle>mvn:commons-dbutils/commons-dbutils/${apache.commons.dbutils.version}</bundle>
+    </feature>
+
+    <feature name="commons-digester"
+             description="XML-to-Java-object mapping utility."
+             version="${apache.commons.digester.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-digester/
+            Many projects read XML configuration files to provide initialization of various Java objects within the system. There are several ways of doing this, and the Digester component was designed to provide a common implementation that can be used in many different projects.
+            Basically, the Digester package lets you configure an XML -> Java object mapping module, which triggers certain actions called rules whenever a particular pattern of nested XML elements is recognized. A rich set of predefined rules is available for your use, or you can also create your own.
+        </details>
+        <feature>commons-beanutils</feature>
+        <feature>commons-logging</feature>
+        <bundle>mvn:commons-digester/commons-digester/${apache.commons.digester.version}</bundle>
+    </feature>
+
+    <feature name="commons-digester3"
+             description="XML-to-Java-object mapping utility."
+             version="${apache.commons.digester3.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-digester/
+            Many projects read XML configuration files to provide initialization of various Java objects within the system. There are several ways of doing this, and the Digester component was designed to provide a common implementation that can be used in many different projects.
+            Basically, the Digester package lets you configure an XML -> Java object mapping module, which triggers certain actions called rules whenever a particular pattern of nested XML elements is recognized. A rich set of predefined rules is available for your use, or you can also create your own.
+        </details>
+        <feature>commons-beanutils</feature>
+        <feature>commons-logging</feature>
+        <feature>cglib</feature>
+        <bundle>mvn:org.apache.commons/commons-digester3/${apache.commons.digester3.version}</bundle>
+    </feature>
+
+    <feature name="commons-discovery"
+             description="Tools for locating resources by mapping service/reference names to resource names."
+             version="${apache.commons.discovery.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-discovery/
+            The Discovery component is about discovering, or finding, implementations for pluggable interfaces. It provides facilities for instantiating classes in general, and for lifecycle management of singleton (factory) classes.
+            Fundamentally, Discovery locates classes that implement a given Java interface. The discovery pattern, though not necessarily this package, is used in many projects including JAXP (SaxParserFactory and others) and commons-logging (LogFactory). By extracting this pattern, other projects can (re)use it and take advantage of improvements to the pattern as Discovery evolves.
+            Discovery improves over previous implementations by establishing facilities for working within managed environments. These allow configuration and property overrides without appealing to the global System properties (which are scoped across an entire JVM).
+        </details>
+        <feature>commons-logging</feature>
+        <bundle>mvn:commons-discovery/commons-discovery/${apache.commons.discovery.version}</bundle>
+    </feature>
+
+    <feature name="commons-el"
+             description="Interpreter for the Expression Language defined by the JSP 2.0 specification."
+             version="${apache.commons.el.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-el/
+            EL is the JSP 2.0 Expression Language Interpreter from Apache.
+        </details>
+        <feature>commons-logging</feature>
+        <bundle>wrap:mvn:commons-el/commons-el/${apache.commons.el.version}</bundle>
+    </feature>
+
+    <feature name="commons-email"
+             description="Library for sending e-mail from Java."
+             version="${apache.commons.email.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-email/
+            Commons Email aims to provide a API for sending email. It is built on top of the Java Mail API, which it aims to simplify.
+        </details>
+        <feature>javax-activation</feature>
+        <bundle>mvn:javax.mail/javax.mail-api/${javax.mail-api.version}</bundle>
+        <bundle>mvn:org.apache.commons/commons-email/${apache.commons.email.version}</bundle>
+    </feature>
+
+    <feature name="commons-exec"
+             description="API for dealing with external process execution and environment management in Java."
+             version="${apache.commons.exec.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-exec/
+            The package shall create and maintain a process execution package written in the Java language to be distributed under the ASF license. The Java code might also be complemented with scripts (e.g. Perl scripts) to fully enable execution on some operating systems. The package should aim for supporting a wide range of operating systems while still having a consistent API for all platforms.
+        </details>
+        <bundle>mvn:org.apache.commons/commons-exec/${apache.commons.exec.version}</bundle>
+    </feature>
+
+    <feature name="commons-fileupload"
+             description="File upload capability for your servlets and web applications."
+             version="${apache.commons.fileupload.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-fileupload/
+            The Commons FileUpload package makes it easy to add robust, high-performance, file upload capability to your servlets and web applications.
+            FileUpload parses HTTP requests which conform to RFC 1867, "Form-based File Upload in HTML". That is, if an HTTP request is submitted using the POST method, and with a content type of "multipart/form-data", then FileUpload can parse that request, and make the results available in a manner easily used by the caller.
+            Starting with version 1.3, FileUpload handles RFC 2047 encoded header values.
+        </details>
+        <feature>commons-io</feature>
+        <bundle>mvn:commons-fileupload/commons-fileupload/${apache.commons.fileupload.version}</bundle>
+    </feature>
+
+    <feature name="commons-io"
+             description="Collection of I/O utilities."
+             version="${apache.commons.io.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-io/
+            Commons IO is a library of utilities to assist with developing IO functionality.
+        </details>
+        <bundle>mvn:commons-io/commons-io/${apache.commons.io.version}</bundle>
+    </feature>
+
+    <feature name="commons-jci-core"
+             description="Java Compiler Interface"
+             version="${apache.commons.jci.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-jci/
+            JCI is a java compiler interface. It can be used to either compile java (or any other language that can be compiled to java classes like e.g. groovy or javascript) to java. It is well integrated with a filesystem alteration monitor that can be used with the JCI compiling/reloading classloader. All the currently supported compilers feature in-memory compilation.
+        </details>
+        <feature>commons-io</feature>
+        <feature>commons-logging</feature>
+        <bundle>mvn:org.apache.commons/commons-jci-fam/${apache.commons.jci.version}</bundle>
+        <bundle>mvn:org.apache.commons/commons-jci-core/${apache.commons.jci.version}</bundle>
+    </feature>
+    <feature name="commons-jci-eclipse"
+             description="Java Compiler Interface (Eclipse JDT)"
+             version="${apache.commons.jci.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-jci/
+            JCI is a java compiler interface. It can be used to either compile java (or any other language that can be compiled to java classes like e.g. groovy or javascript) to java. It is well integrated with a filesystem alteration monitor that can be used with the JCI compiling/reloading classloader. All the currently supported compilers feature in-memory compilation.
+            The current implementation supports compilation via the Eclipse JDT compiler
+        </details>
+        <feature>ecj</feature>
+        <feature>commons-jci-core</feature>
+        <bundle>mvn:org.apache.commons/commons-jci-eclipse/${apache.commons.jci.version}</bundle>
+    </feature>
+    <feature name="commons-jci-janino"
+             description="Java Compiler Interface (Janino)"
+             version="${apache.commons.jci.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-jci/
+            JCI is a java compiler interface. It can be used to either compile java (or any other language that can be compiled to java classes like e.g. groovy or javascript) to java. It is well integrated with a filesystem alteration monitor that can be used with the JCI compiling/reloading classloader. All the currently supported compilers feature in-memory compilation.
+            The current implementation supports compilation via the Janino
+        </details>
+        <feature>janino</feature>
+        <feature>commons-jci-core</feature>
+        <bundle>mvn:org.apache.commons/commons-jci-janino/${apache.commons.jci.version}</bundle>
+    </feature>
+    <feature name="commons-jci-groovy"
+             description="Java Compiler Interface (Groovy)"
+             version="${apache.commons.jci.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-jci/
+            JCI is a java compiler interface. It can be used to either compile java (or any other language that can be compiled to java classes like e.g. groovy or javascript) to java. It is well integrated with a filesystem alteration monitor that can be used with the JCI compiling/reloading classloader. All the currently supported compilers feature in-memory compilation.
+            The current implementation supports compilation via the Groovy
+        </details>
+        <feature>groovy</feature>
+        <feature>commons-jci-core</feature>
+        <bundle>mvn:org.apache.commons/commons-jci-groovy/${apache.commons.jci.version}</bundle>
+    </feature>
+    <feature name="commons-jci-rhino"
+             description="Java Compiler Interface (Rhino)"
+             version="${apache.commons.jci.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-jci/
+            JCI is a java compiler interface. It can be used to either compile java (or any other language that can be compiled to java classes like e.g. groovy or javascript) to java. It is well integrated with a filesystem alteration monitor that can be used with the JCI compiling/reloading classloader. All the currently supported compilers feature in-memory compilation.
+            The current implementation supports compilation via the Rhino
+        </details>
+        <feature>rhino</feature>
+        <feature>commons-jci-core</feature>
+        <bundle>mvn:org.apache.commons/commons-jci-rhino/${apache.commons.jci.version}</bundle>
+    </feature>
+    <feature name="commons-jci-all"
+             description="Java Compiler Interface (All)"
+             version="${apache.commons.jci.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-jci/
+            JCI is a java compiler interface. It can be used to either compile java (or any other language that can be compiled to java classes like e.g. groovy or javascript) to java. It is well integrated with a filesystem alteration monitor that can be used with the JCI compiling/reloading classloader. All the currently supported compilers feature in-memory compilation.
+            The current implementation supports compilation via the following compilers: Eclipse JDT compiler,  Janino, Groovy, Rhino
+        </details>
+        <feature>ecj</feature>
+        <feature>janino</feature>
+        <feature>groovy</feature>
+        <feature>rhino</feature>
+        <feature>commons-jci-core</feature>
+        <bundle>mvn:org.apache.commons/commons-jci-eclipse/${apache.commons.jci.version}</bundle>
+        <bundle>mvn:org.apache.commons/commons-jci-janino/${apache.commons.jci.version}</bundle>
+        <bundle>mvn:org.apache.commons/commons-jci-groovy/${apache.commons.jci.version}</bundle>
+        <bundle>mvn:org.apache.commons/commons-jci-rhino/${apache.commons.jci.version}</bundle>
+    </feature>
+
+    <feature name="commons-jcs"
+             description="Java Caching System"
+             version="${apache.commons.jcs.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-jcs/
+            JCS is a distributed caching system written in java. It is intended to speed up applications by providing a means to manage cached data of various dynamic natures. Like any caching system, JCS is most useful for high read, low put applications. Latency times drop sharply and bottlenecks move away from the database in an effectively cached system.
+        </details>
+        <feature>concurrent</feature>
+        <feature>commons-logging</feature>
+        <bundle>wrap:mvn:org.apache.jcs/jcs/${apache.commons.jcs.version}</bundle>
+    </feature>
+
+    <feature name="commons-jexl"
+             description="Expression language which extends the Expression Language of the JSTL."
+             version="${apache.commons.jexl.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-jexl/
+            JEXL is a library intended to facilitate the implementation of dynamic and scripting features in applications and frameworks written in Java.
+            JEXL implements an Expression Language based on some extensions to the JSTL Expression Language supporting most of the constructs seen in shell-script or ECMAScript.
+            Its goal is to expose scripting features usable by technical operatives or consultants working with enterprise platforms.
+        </details>
+        <feature>commons-logging</feature>
+        <bundle>mvn:org.apache.commons/commons-jexl/${apache.commons.jexl.version}</bundle>
+    </feature>
+
+    <feature name="commons-jxpath"
+             description="Utilities for manipulating Java Beans using the XPath syntax."
+             version="${apache.commons.jxpath.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-jxpath/
+            The org.apache.commons.jxpath package defines a simple interpreter of an expression language called XPath. JXPath applies XPath expressions to graphs of objects of all kinds: JavaBeans, Maps, Servlet contexts, DOM etc, including mixtures thereof.
+        </details>
+        <bundle>mvn:commons-jxpath/commons-jxpath/${apache.commons.jxpath.version}</bundle>
+    </feature>
+
+    <feature name="commons-lang"
+             description="Provides extra functionality for classes in java.lang."
+             version="${apache.commons.lang.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-lang/
+            The standard Java libraries fail to provide enough methods for manipulation of its core classes. Apache Commons Lang provides these extra methods.
+            Lang provides a host of helper utilities for the java.lang API, notably String manipulation methods, basic numerical methods, object reflection, concurrency, creation and serialization and System properties. Additionally it contains basic enhancements to java.util.Date and a series of utilities dedicated to help with building methods, such as hashCode, toString and equals.
+        </details>
+        <bundle>mvn:commons-lang/commons-lang/${apache.commons.lang.version}</bundle>
+    </feature>
+    <feature name="commons-lang3"
+             description="Provides extra functionality for classes in java.lang."
+             version="${apache.commons.lang3.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-lang/
+            The standard Java libraries fail to provide enough methods for manipulation of its core classes. Apache Commons Lang provides these extra methods.
+            Lang provides a host of helper utilities for the java.lang API, notably String manipulation methods, basic numerical methods, object reflection, concurrency, creation and serialization and System properties. Additionally it contains basic enhancements to java.util.Date and a series of utilities dedicated to help with building methods, such as hashCode, toString and equals.
+            Note that Lang 3.0 (and subsequent versions) use a different package (org.apache.commons.lang3) than the previous versions (org.apache.commons.lang), allowing it to be used at the same time as an earlier version.
+        </details>
+        <bundle>mvn:org.apache.commons/commons-lang3/${apache.commons.lang.version}</bundle>
+    </feature>
+
+    <!--<feature name="commons-launcher"
+             description="Cross platform Java application launcher."
+             version="${apache.commons.launcher.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-launcher/
+            The Launcher Component is designed to be a cross platform Java application launcher.
+            The original Java classes come from the Tomcat 4.0 project.
+            Commons-launcher eliminates the need for a batch or shell script to launch a Java class.
+        </details>
+        <bundle>mvn:commons-launcher/commons-launcher/${apache.commons.launcher.version}</bundle>
+    </feature>-->
+
+    <feature name="commons-logging"
+             description="Wrapper around a variety of logging API implementations."
+             version="${apache.commons.logging.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-logging/
+            The Logging package is an ultra-thin bridge between different logging implementations. A library that uses the commons-logging API can be used with any logging implementation at runtime. Commons-logging comes with support for a number of popular logging implementations, and writing adapters for others is a reasonably simple task.
+        </details>
+        <bundle>mvn:commons-logging/commons-logging/${apache.commons.logging.version}</bundle>
+    </feature>
+
+    <feature name="commons-math"
+             description="Lightweight, self-contained mathematics and statistics components."
+             version="${apache.commons.math.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-math/
+            Commons Math is a library of lightweight, self-contained mathematics and statistics components addressing the most common problems not available in the Java programming language or Commons Lang.
+        </details>
+        <bundle>mvn:org.apache.commons/commons-math/${apache.commons.math.version}</bundle>
+    </feature>
+    <feature name="commons-math3"
+             description="Lightweight, self-contained mathematics and statistics components."
+             version="${apache.commons.math3.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-math/
+            Commons Math is a library of lightweight, self-contained mathematics and statistics components addressing the most common problems not available in the Java programming language or Commons Lang.
+        </details>
+        <bundle>mvn:org.apache.commons/commons-math3/${apache.commons.math3.version}</bundle>
+    </feature>
+
+    <feature name="commons-modeler"
+             description="Mechanisms to create Model MBeans compatible with JMX specification."
+             version="${apache.commons.modeler.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-modeler/
+            Java Management Extensions (JMX) is an API that facilitates building management applications that can configure, and perform operations on, a server application. In general, each manageable component of the server application is represented by a Management Bean (or MBean, for short). JMX defines three types of MBeans, of which Model MBeans are the most flexible
+        </details>
+        <feature>commons-digester</feature>
+        <bundle>wrap:mvn:commons-logging/commons-logging-api/${apache.commons.logging-api.version}</bundle>
+        <bundle>wrap:mvn:commons-modeler/commons-modeler/${apache.commons.modeler.version}</bundle>
+    </feature>
+
+    <feature name="commons-net"
+             description="Collection of network utilities and protocol implementations."
+             version="${apache.commons.net.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-net/
+            Apache Commons Net™ library implements the client side of many basic Internet protocols. The purpose of the library is to provide fundamental protocol access, not higher-level abstractions. Therefore, some of the design violates object-oriented design principles. Our philosophy is to make the global functionality of a protocol accessible (e.g., TFTP send file and receive file) when possible, but also provide access to the fundamental protocols where applicable so that the programmer may construct his own custom implementations (e.g, the TFTP packet classes and the TFTP packet send and receive methods are exposed).
+        </details>
+        <bundle>mvn:commons-net/commons-net/${apache.commons.net.version}</bundle>
+    </feature>
+
+    <feature name="commons-pool"
+             description="Generic object pooling component."
+             version="${apache.commons.pool.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-pool/
+            The Apache Commons Pool open source software library provides an object-pooling API and a number of object pool implementations.
+        </details>
+        <bundle>mvn:commons-pool/commons-pool/${apache.commons.pool.version}</bundle>
+    </feature>
+    <feature name="commons-pool2"
+             description="Generic object pooling component."
+             version="${apache.commons.pool2.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-pool/
+            The Apache Commons Pool open source software library provides an object-pooling API and a number of object pool implementations.Version 2 of Apache Commons Pool contains a completely re-written pooling implementation compared to the 1.x series. In addition to performance and scalability improvements, version 2 includes robust instance tracking and pool monitoring. Version 2 requires JDK level 1.6 or above.
+        </details>
+        <bundle>mvn:org.apache.commons/commons-pool2/${apache.commons.pool2.version}</bundle>
+    </feature>
+
+    <feature name="commons-primitives"
+             description="Smaller, faster and easier to work with types supporting Java primitive types."
+             version="${apache.commons.primitives.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-primitives/
+            The Java language is mostly Object based, however the original designers chose to include eight primitive types - boolean, byte, char, double, float, int, long and short. Commons Primitives provides a library of collections and utilities specially designed for use with primitive types.
+        </details>
+        <bundle>wrap:mvn:commons-primitives/commons-primitives/${apache.commons.primitives.version}</bundle>
+    </feature>
+
+    <feature name="commons-proxy"
+             description="Library for creating dynamic proxies."
+             version="${apache.commons.proxy.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-proxy/
+            The Proxy design pattern (GoF) allows you to provide “a surrogate or placeholder for another object to control access to it”. Proxies can be used in many ways, some of which are:
+            Deferred Initialization - the proxy acts as a “stand-in” for the actual implementation allowing it to be instantiated only when absolutely necessary.
+            Security - the proxy object can verify that the user actually has the permission to execute the method (a la EJB).
+            Logging - the proxy can log evey method invocation, providing valuable debugging information.
+            Performance Monitoring - the proxy can log each method invocation to a performance monitor allowing system administrators to see what parts of the system are potentially bogged down.
+            Commons Proxy supports dynamic proxy generation using proxy factories, object providers, invokers, and interceptors.
+        </details>
+        <bundle>mvn:org.apache.commons/commons-proxy/${apache.commons.primitives.version}</bundle>
+    </feature>
+
+    <feature name="commons-scxml"
+             description="An implementation of the State Chart XML specification aimed at creating and maintaining a Java SCXML engine. It is capable of executing a state machine defined using a SCXML document, and abstracts out the environment interfaces."
+             version="${apache.commons.scxml.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-scxml/
+            State Chart XML (SCXML) is currently a Working Draft specification published by the World Wide Web Consortium (W3C). SCXML provides a generic state-machine based execution environment based on Harel State Tables. SCXML is a candidate for the control language within multiple markup languages coming out of the W3C (see the latest Working Draft for details). Commons SCXML is an implementation aimed at creating and maintaining a Java SCXML engine capable of executing a state machine defined using a SCXML document, while abstracting out the environment interfaces.
+        </details>
+        <feature>commons-logging</feature>
+        <feature>commons-digester</feature>
+        <feature>commons-beanutils</feature>
+        <bundle>mvn:commons-scxml/commons-scxml/${apache.commons.scxml.version}</bundle>
+    </feature>
+
+    <feature name="commons-validator"
+             description="Framework to define validators and validation rules in an xml file."
+             version="${apache.commons.validator.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-validator/
+            A common issue when receiving data either electronically or from user input is verifying the integrity of the data. This work is repetitive and becomes even more complicated when different sets of validation rules need to be applied to the same set of data based on locale. Error messages may also vary by locale. This package addresses some of these issues to speed development and maintenance of validation rules.
+        </details>
+        <feature>commons-logging</feature>
+        <feature>commons-digester</feature>
+        <feature>commons-beanutils</feature>
+        <bundle>mvn:commons-validator/commons-validator/${apache.commons.validator.version}</bundle>
+    </feature>
+
+    <feature name="commons-vfs2"
+             description="Virtual File System component for treating files, FTP, SMB, ZIP and such like as a single logical file system."
+             version="${apache.commons.vfs2.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-vfs/
+            Commons VFS provides a single API for accessing various different file systems. It presents a uniform view of the files from various different sources, such as the files on local disk, on an HTTP server, or inside a Zip archive.
+        </details>
+        <feature>commons-logging</feature>
+        <bundle>mvn:org.apache.commons/commons-vfs2/${apache.commons.vfs2.version}</bundle>
+    </feature>
+
+    <feature name="commons-weaver"
+             description="Provides an easy way to enhance (weave) compiled bytecode."
+             version="${apache.commons.weaver.version}"  resolver="(obr)">
+        <details>
+            url:http://commons.apache.org/proper/commons-vfs/
+            Occasionally, as Java developers, we encounter a problem whose solution simply cannot be expressed in the Java language. Often, the Java annotation processing tools can be used to great effect, and they should not be dismissed as your first line of defense when you need to generate additional classes. Occasionally, however, our only recourse is to manipulate existing class files. It is these situations which Apache Commons Weaver was designed to address.
+        </details>
+        <feature>commons-lang3</feature>
+        <feature>javax-activation</feature>
+        <bundle>mvn:org.apache.xbean/xbean-finder-shaded/${apache.xbean.version}</bundle>
+        <bundle>mvn:org.apache.xbean/xbean-asm4-shaded/${apache.xbean.version}</bundle>
+        <bundle>mvn:org.apache.commons/commons-weaver-privilizer/${apache.commons.weaver.version}</bundle>
+        <bundle>mvn:org.apache.commons/commons-weaver-privilizer-api/${apache.commons.weaver.version}</bundle>
+        <bundle>mvn:org.apache.commons/commons-weaver-normalizer/${apache.commons.weaver.version}</bundle>
+        <bundle>mvn:org.apache.commons/commons-weaver-processor/${apache.commons.weaver.version}</bundle>
+    </feature>
+
+
+</features>
