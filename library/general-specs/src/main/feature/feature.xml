@@ -21,21 +21,30 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="
           http://karaf.apache.org/xmlns/features/v1.2.0 http://karaf.apache.org/xmlns/features/v1.2.0">
-    <feature name="javax-activation"
-             description="Java Activation Spec API 1.1"
-             version="${javax.activation.version}"  resolver="(obr)">
+    <feature name="javax-activation" description="Java Activation Spec API 1.1" version="${javax.activation.version}"  resolver="(obr)">
         <bundle>mvn:${javax.activation.bundle.groupId}/${javax.activation.bundle.artifactId}/${javax.activation.bundle.version}</bundle>
     </feature>
 
-    <feature name="javax-inject"
-             description="This OSGi bundle wraps javax.inject 1 jar file."
-             version="${javax.inject.version}"  resolver="(obr)">
+    <feature name="javax-inject" description="This OSGi bundle wraps javax.inject 1 jar file." version="${javax.inject.version}"  resolver="(obr)">
         <bundle>mvn:${javax.inject.bundle.groupId}/${javax.inject.bundle.artifactId}/${javax.inject.bundle.version}</bundle>
     </feature>
 
-    <feature name="javax-annotation"
-             description="Annotation spec 1.1 API"
-             version="${javax.annotation.version}"  resolver="(obr)">
+    <feature name="javax-annotation" description="Annotation spec 1.1 API" version="${javax.annotation.version}"  resolver="(obr)">
         <bundle>mvn:${javax.annotation.bundle.groupId}/${javax.annotation.bundle.artifactId}/${javax.annotation.bundle.version}</bundle>
     </feature>
+
+    <feature name="javax-resource" description="Java EE Connector Architecture API Specification" version="${javax.resource.version}"  resolver="(obr)">
+        <bundle>wrap:mvn:javax.resource/connector-api/${javax.resource.version}</bundle>
+    </feature>
+
+    <feature name="javax-resource-api" description="Java EE Connector Architecture API" version="${javax.resource-api.version}"  resolver="(obr)">
+        <feature>javax-transaction-api</feature>
+        <bundle>mvn:javax.resource/javax.resource-api/${javax.resource-api.version}</bundle>
+    </feature>
+
+    <feature name="javax-transaction-api" description="Java EE Connector Architecture API" version="${javax.transaction-api.version}"  resolver="(obr)">
+        <bundle>mvn:javax.transaction/javax.transaction-api/${javax.transaction-api.version}</bundle>
+    </feature>
+
+
 </features>

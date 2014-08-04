@@ -31,6 +31,7 @@
             <groupId>${javax.activation.bundle.groudId}</groupId>
             <artifactId>${javax.activation.bundle.artifactId}</artifactId>
             <version>${javax.activation.bundle.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- javax inject -->
@@ -38,6 +39,7 @@
             <groupId>${javax.inject.bundle.groudId}</groupId>
             <artifactId>${javax.inject.bundle.artifactId}</artifactId>
             <version>${javax.inject.bundle.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- Annotation spec 1.1 API -->
@@ -45,9 +47,32 @@
             <groupId>${javax.annotation.bundle.groudId}</groupId>
             <artifactId>${javax.annotation.bundle.artifactId}</artifactId>
             <version>${javax.annotation.bundle.version}</version>
+            <scope>provided</scope>
         </dependency>
 
+        <!-- Java EE Connector Architecture API Specification -->
         <dependency>
+            <groupId>javax.resource</groupId>
+            <artifactId>connector-api</artifactId>
+            <version>${javax.resource.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Java EE Connector Architecture API -->
+        <dependency>
+            <groupId>javax.resource</groupId>
+            <artifactId>javax.resource-api</artifactId>
+            <version>${javax.resource-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Javax.transaction API -->
+        <dependency>
+            <groupId>javax.transaction</groupId>
+            <artifactId>javax.transaction-api</artifactId>
+            <version>${javax.transaction-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!--<dependency>
             <groupId>org.apache.geronimo.specs</groupId>
             <artifactId>geronimo-el_2.2_spec</artifactId>
             <version>1.0.4</version>
@@ -56,7 +81,7 @@
             <groupId>org.apache.geronimo.specs</groupId>
             <artifactId>geronimo-el_1.0_spec</artifactId>
             <version>1.0.2</version>
-        </dependency>
+        </dependency>-->
 
     </dependencies>
 

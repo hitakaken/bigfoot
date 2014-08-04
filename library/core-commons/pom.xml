@@ -31,6 +31,7 @@
             <groupId>org.javassist</groupId>
             <artifactId>javassist</artifactId>
             <version>${javassist.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- Aopalliance -->
@@ -38,6 +39,7 @@
             <groupId>org.apache.servicemix.bundles</groupId>
             <artifactId>org.apache.servicemix.bundles.aopalliance</artifactId>
             <version>${aopalliance.bundle.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- ASM -->
@@ -45,6 +47,7 @@
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm</artifactId>
             <version>${asm.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- Aspectj -->
@@ -52,6 +55,7 @@
             <groupId>org.apache.servicemix.bundles</groupId>
             <artifactId>org.apache.servicemix.bundles.aspectj</artifactId>
             <version>${aspectj.bundle.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- CgLib-->
@@ -59,6 +63,7 @@
             <groupId>org.apache.servicemix.bundles</groupId>
             <artifactId>org.apache.servicemix.bundles.cglib</artifactId>
             <version>${cglib.bundle.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- Concurrent -->
@@ -66,6 +71,7 @@
             <groupId>org.apache.servicemix.bundles</groupId>
             <artifactId>org.apache.servicemix.bundles.concurrent</artifactId>
             <version>${concurrent.bundle.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- Eclipse JDT  Core Batch Compiler-->
@@ -73,6 +79,7 @@
             <groupId>org.eclipse.jdt.core.compiler</groupId>
             <artifactId>ecj</artifactId>
             <version>${eclipse.ecj.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- Groovy -->
@@ -80,6 +87,7 @@
             <groupId>org.codehaus.groovy</groupId>
             <artifactId>groovy-all</artifactId>
             <version>${groovy.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- Janino -->
@@ -87,16 +95,19 @@
             <groupId>org.codehaus.janino</groupId>
             <artifactId>janino</artifactId>
             <version>${janino.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.codehaus.janino</groupId>
             <artifactId>commons-compiler</artifactId>
             <version>${janino.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.codehaus.janino</groupId>
             <artifactId>commons-compiler-jdk</artifactId>
             <version>${janino.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- Mozilla Rhino JS Engine-->
@@ -104,8 +115,42 @@
             <groupId>org.mozilla</groupId>
             <artifactId>rhino</artifactId>
             <version>${mozilla.rhino.version}</version>
+            <scope>provided</scope>
         </dependency>
 
+        <!-- ANTLR -->
+        <dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.antlr-runtime</artifactId>
+            <version>${antlr.bundle.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- TODO initialize ANLTR and ANLTR4
+        <dependency>
+            <groupId>org.antlr</groupId>
+            <artifactId>antlr-runtime</artifactId>
+            <version>${antlr.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.antlr</groupId>
+            <artifactId>antlr</artifactId>
+            <version>${antlr.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.antlr</artifactId>
+            <version>${antlr.bundle.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.antlr</groupId>
+            <artifactId>antlr4</artifactId>
+            <version>${antlr4.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.antlr</groupId>
+            <artifactId>antlr4-runtime</artifactId>
+            <version>${antlr4.version}</version>
+        </dependency>-->
     </dependencies>
 
     <build>

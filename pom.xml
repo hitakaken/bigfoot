@@ -64,6 +64,9 @@
         <groovy.version>2.3.6</groovy.version>
         <janino.version>2.7.5</janino.version>
         <mozilla.rhino.version>1.7R4</mozilla.rhino.version>
+        <antlr.version>3.5.2</antlr.version>
+        <antlr.bundle.version>3.5.2_1</antlr.bundle.version>
+        <antlr4.version>4.3</antlr4.version>
         <!-- General Specifications -->
         <javax.activation.version>1.1</javax.activation.version>
         <javax.activation.bundle.groudId>org.apache.geronimo.specs</javax.activation.bundle.groudId>
@@ -79,6 +82,9 @@
         <javax.annotation.bundle.artifactId>geronimo-annotation_1.1_spec</javax.annotation.bundle.artifactId>
         <javax.annotation.bundle.version>${geronimo.annotation-spec.version}</javax.annotation.bundle.version>
         <geronimo.annotation-spec.version>1.0.1</geronimo.annotation-spec.version>
+        <javax.resource.version>1.5</javax.resource.version>
+        <javax.resource-api.version>1.7</javax.resource-api.version>
+        <javax.transaction-api.version>1.2</javax.transaction-api.version>
         <!-- Apache Commons -->
         <apache.commons.bcel.version>5.2</apache.commons.bcel.version>
         <apache.commons.bcel.bundle.version>5.2_4</apache.commons.bcel.bundle.version>
@@ -133,8 +139,14 @@
         <google.guava.version>17.0</google.guava.version>
         <google.guice.version>3.0</google.guice.version>
         <google.guice.bundle.version>3.0_1</google.guice.bundle.version>
-        <!-- General Database Driver-->
-
+        <!-- General Database Driver--><!-- As we use Java 7, So JDBC 4.1 is recommand-->
+        <apache.derby.version>10.10.2.0</apache.derby.version>
+        <jaybird.version>2.2.5</jaybird.version>
+        <h2.version>1.4.180</h2.version>
+        <hsqldb.version>2.3.2</hsqldb.version>
+        <mysql.version>5.1.31</mysql.version>
+        <postgresql.version>9.3-1102-jdbc41</postgresql.version>
+        <sqlite.version>3.7.2</sqlite.version><!-- Wait for 3.8.x to Support JDBC 4.0-->
         <!-- Test 相关-->
         <easymock.version>3.2</easymock.version>
         <!-- Furter used maven plugin versions; e.g. in the docs -->

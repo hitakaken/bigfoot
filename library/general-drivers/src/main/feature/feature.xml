@@ -21,5 +21,52 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="
           http://karaf.apache.org/xmlns/features/v1.2.0 http://karaf.apache.org/xmlns/features/v1.2.0">
+    <feature name="derby" description="Apache Derby Database Engine And Embedded JDBC Driver" version="${apache.derby.version}"  resolver="(obr)">
+        <bundle>mvn:org.apache.derby/derby/${apache.derby.version}</bundle>
+    </feature>
 
+    <feature name="jaybird" description="Jaybird JDBC Driver" version="${jaybird.version}"  resolver="(obr)">
+        <details>JDBC Driver for the Firebird RDBMS</details>
+        <feature>javax-resource</feature>
+        <feature>antlr-runtime</feature>
+        <bundle>wrap:mvn:org.firebirdsql.jdbc/jaybird-jdk17/${jaybird.version}</bundle>
+    </feature>
+    <feature name="jaybird-jdk16" description="Jaybird JDBC Driver" version="${jaybird.version}"  resolver="(obr)">
+        <details>JDBC Driver for the Firebird RDBMS</details>
+        <feature>javax-resource</feature>
+        <feature>antlr-runtime</feature>
+        <bundle>wrap:mvn:org.firebirdsql.jdbc/jaybird-jdk16/${jaybird.version}</bundle>
+    </feature>
+    <feature name="jaybird-jdk17" description="Jaybird JDBC Driver" version="${jaybird.version}"  resolver="(obr)">
+        <details>JDBC Driver for the Firebird RDBMS</details>
+        <feature>javax-resource</feature>
+        <feature>antlr-runtime</feature>
+        <bundle>wrap:mvn:org.firebirdsql.jdbc/jaybird-jdk17/${jaybird.version}</bundle>
+    </feature>
+    <feature name="jaybird-jdk18" description="Jaybird JDBC Driver" version="${jaybird.version}"  resolver="(obr)">
+        <details>JDBC Driver for the Firebird RDBMS</details>
+        <feature>javax-resource</feature>
+        <feature>antlr-runtime</feature>
+        <bundle>wrap:mvn:org.firebirdsql.jdbc/jaybird-jdk18/${jaybird.version}</bundle>
+    </feature>
+
+    <feature name="h2" description="H2 Database Engine" version="${h2.version}"  resolver="(obr)">
+        <bundle>mvn:com.h2database/h2/${h2.version}</bundle>
+    </feature>
+
+    <feature name="hsqldb" description="HSQLDB - Lightweight 100% Java SQL Database Engine" version="${hsqldb.version}"  resolver="(obr)">
+        <bundle>mvn:org.hsqldb/hsqldb/${hsqldb.version}</bundle>
+    </feature>
+
+    <feature name="mysql" description="MySQL java connector" version="${mysql.version}"  resolver="(obr)">
+        <bundle>mvn:mysql/mysql-connector-java/${mysql.version}</bundle>
+    </feature>
+
+    <feature name="postgresql" description="The PostgreSQL Driver JDBC41" version="${postgresql.version}"  resolver="(obr)">
+        <bundle>wrap:mvn:org.postgresql/postgresql/${postgresql.version}</bundle>
+    </feature>
+
+    <feature name="sqlite" description="SQLite JDBC library" version="${sqlite.version}"  resolver="(obr)">
+        <bundle>wrap:mvn:org.xerial/sqlite-jdbc/${sqlite.version}</bundle>
+    </feature>
 </features>
