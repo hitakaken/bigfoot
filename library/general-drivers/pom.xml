@@ -176,7 +176,7 @@
             <scope>provided</scope>
         </dependency>
         <!-- SAP Sybase JDBC driver -->
-
+        <!-- jConnect can't be downloaded -->
         <!-- Sqlite3 JDBC driver -->
         <dependency>
             <groupId>org.xerial</groupId>
@@ -185,7 +185,6 @@
             <scope>provided</scope>
         </dependency>
         <!-- Teradata JDBC driver -->
-
 
         <!-- Document Store -->
         <!-- MongoDB driver-->
