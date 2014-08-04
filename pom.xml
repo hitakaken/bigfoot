@@ -144,9 +144,14 @@
         <jaybird.version>2.2.5</jaybird.version>
         <h2.version>1.4.180</h2.version>
         <hsqldb.version>2.3.2</hsqldb.version>
+        <ibm.db2.version>10.5</ibm.db2.version>
+        <ibm.informix.version>4.10.JC4DE</ibm.informix.version>
+        <jtds.version>1.3.1</jtds.version>
         <mysql.version>5.1.31</mysql.version>
+        <microsoft.sqlserver.version>4.0.2206.100</microsoft.sqlserver.version>
         <postgresql.version>9.3-1102-jdbc41</postgresql.version>
         <sqlite.version>3.7.2</sqlite.version><!-- Wait for 3.8.x to Support JDBC 4.0-->
+        <mongodb.version>2.12.3</mongodb.version>
         <!-- Test 相关-->
         <easymock.version>3.2</easymock.version>
         <!-- Furter used maven plugin versions; e.g. in the docs -->

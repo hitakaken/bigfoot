@@ -121,27 +121,59 @@
             <artifactId>hsqldb</artifactId>
             <version>${hsqldb.version}</version>
         </dependency>
+        <!-- IBM JDBC Driver must use IBM JDK -->
         <!-- IBM DB2 JDBC driver -->
-
+        <!--<dependency>
+            <groupId>com.ibm.db2</groupId>
+            <artifactId>db2jcc</artifactId>
+            <version>10.5</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ibm.db2</groupId>
+            <artifactId>db2jcc4</artifactId>
+            <version>${ibm.db2.version}</version>
+        </dependency>-->
         <!-- IBM Informix JDBC driver -->
-
+        <!--<dependency>
+          <groupId>com.ibm.informix</groupId>
+          <artifactId>informix-jdbc</artifactId>
+          <version>${ibm.informix.version}</version>
+      </dependency>-->
+        <!-- jTDS JDBC driver-->
+        <dependency>
+            <groupId>net.sourceforge.jtds</groupId>
+            <artifactId>jtds</artifactId>
+            <version>${jtds.version}</version>
+            <scope>provided</scope>
+        </dependency>
         <!-- MYSQL JDBC driver -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.version}</version>
+            <scope>provided</scope>
         </dependency>
         <!-- Microsoft SQLServer JDBC driver -->
-
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>sqljdbc4</artifactId>
+            <version>${microsoft.sqlserver.version}</version>
+            <scope>provided</scope>
+        </dependency>
         <!-- ODBC JDBC driver-->
-
+        <!-- within JDK -->
         <!-- ORACLE JDBC driver -->
-
+        <!--<dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc14</artifactId>
+            <version>10.2.0.4.0</version>
+        </dependency>-->
         <!-- PostgreSQL JDBC driver -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>${postgresql.version}</version>
+            <scope>provided</scope>
         </dependency>
         <!-- SAP Sybase JDBC driver -->
 
@@ -150,11 +182,19 @@
             <groupId>org.xerial</groupId>
             <artifactId>sqlite-jdbc</artifactId>
             <version>${sqlite.version}</version>
+            <scope>provided</scope>
         </dependency>
         <!-- Teradata JDBC driver -->
 
 
         <!-- Document Store -->
+        <!-- MongoDB driver-->
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>${mongodb.version}</version>
+            <scope>provided</scope>
+        </dependency>
 
         <!-- Graph -->
 
