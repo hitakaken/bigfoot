@@ -25,7 +25,11 @@
             <artifactId>org.apache.karaf.features.core</artifactId>
             <scope>provided</scope>
         </dependency>
+        <!-- Json -->
 
+        <!-- XML -->
+
+        <!-- YAML -->
     </dependencies>
     <build>
         <plugins>
