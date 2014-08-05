@@ -8,12 +8,13 @@
         <groupId>bigfoot.framework.library</groupId>
         <artifactId>library</artifactId>
         <version>0.1.1.Alpha</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>google-commons</artifactId>
+    <artifactId>data-format</artifactId>
     <packaging>pom</packaging>
-    <name>Bigfoot Framework :: Library :: Google</name>
-    <description>Google 类库组件集合，提供来自Google开源项目的Features</description>
+    <name>Bigfoot Framework :: Library :: Data Format</name>
+    <description>Data Format类库组件集合，提供Json,XML数据格式解析、转换的Features</description>
     <properties>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
@@ -24,60 +25,6 @@
             <artifactId>org.apache.karaf.features.core</artifactId>
             <scope>provided</scope>
         </dependency>
-        <!-- Bigfoot deps -->
-        <dependency>
-            <groupId>bigfoot.framework.library</groupId>
-            <artifactId>core-commons</artifactId>
-            <classifier>features</classifier>
-            <type>xml</type>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>bigfoot.framework.library</groupId>
-            <artifactId>general-specs</artifactId>
-            <classifier>features</classifier>
-            <type>xml</type>
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- Google Guava -->
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>${google.guava.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- Google Guice -->
-        <dependency>
-            <groupId>org.apache.servicemix.bundles</groupId>
-            <artifactId>org.apache.servicemix.bundles.guice</artifactId>
-            <version>${google.guice.bundle.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.servicemix.bundles</groupId>
-            <artifactId>org.apache.servicemix.bundles.javax-inject</artifactId>
-            <version>${javax.inject.bundle.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.servicemix.bundles</groupId>
-            <artifactId>org.apache.servicemix.bundles.aopalliance</artifactId>
-            <version>${aopalliance.bundle.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <!--<dependency>
-            <groupId>com.google.inject</groupId>
-            <artifactId>guice</artifactId>
-            <version>${google.guice.version}</version>
-        </dependency>-->
-
-        <!-- Google Gson -->
-        <!-- Google GWT -->
-        <!-- Google Protocol Buffer -->
-        <!-- Google Zxing -->
-
 
     </dependencies>
     <build>
@@ -125,4 +72,5 @@
             </plugin>
         </plugins>
     </build>
+    
 </project>

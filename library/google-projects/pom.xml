@@ -11,14 +11,13 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>general-specs</artifactId>
+    <artifactId>google-projects</artifactId>
     <packaging>pom</packaging>
-    <name>Bigfoot Framework :: Library :: General Specifications</name>
-    <description>常用Specifications类库组件集合，Geronimo、ServiceMix项目中提供的Bundle化的规范集合</description>
+    <name>Bigfoot Framework :: Library :: Google Projects</name>
+    <description>Google 类库组件集合，提供来自Google开源项目的Features</description>
     <properties>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
-
     <dependencies>
         <!-- Karaf deps -->
         <dependency>
@@ -26,66 +25,84 @@
             <artifactId>org.apache.karaf.features.core</artifactId>
             <scope>provided</scope>
         </dependency>
-
-        <!-- javax activation 1.1 -->
+        <!-- Bigfoot deps -->
         <dependency>
-            <groupId>${javax.activation.bundle.groudId}</groupId>
-            <artifactId>${javax.activation.bundle.artifactId}</artifactId>
-            <version>${javax.activation.bundle.version}</version>
+            <groupId>bigfoot.framework.library</groupId>
+            <artifactId>core-commons</artifactId>
+            <classifier>features</classifier>
+            <type>xml</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>bigfoot.framework.library</groupId>
+            <artifactId>general-specs</artifactId>
+            <classifier>features</classifier>
+            <type>xml</type>
             <scope>provided</scope>
         </dependency>
 
-        <!-- javax inject -->
+        <!-- Google Guava -->
         <dependency>
-            <groupId>${javax.inject.bundle.groudId}</groupId>
-            <artifactId>${javax.inject.bundle.artifactId}</artifactId>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${google.guava.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Google Guice -->
+        <dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.guice</artifactId>
+            <version>${google.guice.bundle.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.javax-inject</artifactId>
             <version>${javax.inject.bundle.version}</version>
             <scope>provided</scope>
         </dependency>
-
-        <!-- Annotation spec 1.1 API -->
         <dependency>
-            <groupId>${javax.annotation.bundle.groudId}</groupId>
-            <artifactId>${javax.annotation.bundle.artifactId}</artifactId>
-            <version>${javax.annotation.bundle.version}</version>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.aopalliance</artifactId>
+            <version>${aopalliance.bundle.version}</version>
             <scope>provided</scope>
         </dependency>
-
-        <!-- Java EE Connector Architecture API Specification -->
-        <dependency>
-            <groupId>javax.resource</groupId>
-            <artifactId>connector-api</artifactId>
-            <version>${javax.resource.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <!-- Java EE Connector Architecture API -->
-        <dependency>
-            <groupId>javax.resource</groupId>
-            <artifactId>javax.resource-api</artifactId>
-            <version>${javax.resource-api.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <!-- Javax.transaction API -->
-        <dependency>
-            <groupId>javax.transaction</groupId>
-            <artifactId>javax.transaction-api</artifactId>
-            <version>${javax.transaction-api.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
         <!--<dependency>
-            <groupId>org.apache.geronimo.specs</groupId>
-            <artifactId>geronimo-el_2.2_spec</artifactId>
-            <version>1.0.4</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.geronimo.specs</groupId>
-            <artifactId>geronimo-el_1.0_spec</artifactId>
-            <version>1.0.2</version>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
+            <version>${google.guice.version}</version>
         </dependency>-->
 
-    </dependencies>
+        <!-- Google Gson -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${google.gson.version}</version>
+            <scope>provided</scope>
+        </dependency>
 
+        <!-- Google GWT -->
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-user</artifactId>
+            <version>${google.gwt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-dev</artifactId>
+            <version>${google.gwt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-servlet</artifactId>
+            <version>${google.gwt.version}</version>
+        </dependency>
+        <!-- Google Protocol Buffer -->
+        <!-- Google Zxing -->
+
+
+    </dependencies>
     <build>
         <plugins>
             <plugin>
@@ -131,5 +148,4 @@
             </plugin>
         </plugins>
     </build>
-    
 </project>

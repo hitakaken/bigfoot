@@ -8,6 +8,7 @@
         <groupId>bigfoot.framework.library</groupId>
         <artifactId>library</artifactId>
         <version>0.1.1.Alpha</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>general-drivers</artifactId>
@@ -114,29 +115,26 @@
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <version>${h2.version}</version>
+            <scope>provided</scope>
         </dependency>
         <!-- HSQLDB JDBC driver -->
         <dependency>
             <groupId>org.hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
             <version>${hsqldb.version}</version>
+            <scope>provided</scope>
         </dependency>
-        <!-- IBM JDBC Driver must use IBM JDK -->
-        <!-- IBM DB2 JDBC driver -->
-        <!--<dependency>
-            <groupId>com.ibm.db2</groupId>
-            <artifactId>db2jcc</artifactId>
-            <version>10.5</version>
-        </dependency>
+        <!-- IBM DB2 JDBC driver --><!-- IBM JDBC Driver must use IBM JDK -->
         <dependency>
-            <groupId>com.ibm.db2</groupId>
+            <groupId>com.ibm</groupId>
             <artifactId>db2jcc4</artifactId>
             <version>${ibm.db2.version}</version>
-        </dependency>-->
+            <scope>provided</scope>
+        </dependency>
         <!-- IBM Informix JDBC driver -->
         <!--<dependency>
-          <groupId>com.ibm.informix</groupId>
-          <artifactId>informix-jdbc</artifactId>
+          <groupId>com.ibm</groupId>
+          <artifactId>informix</artifactId>
           <version>${ibm.informix.version}</version>
       </dependency>-->
         <!-- jTDS JDBC driver-->
@@ -146,13 +144,6 @@
             <version>${jtds.version}</version>
             <scope>provided</scope>
         </dependency>
-        <!-- MYSQL JDBC driver -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql.version}</version>
-            <scope>provided</scope>
-        </dependency>
         <!-- Microsoft SQLServer JDBC driver -->
         <dependency>
             <groupId>com.microsoft.sqlserver</groupId>
@@ -160,14 +151,40 @@
             <version>${microsoft.sqlserver.version}</version>
             <scope>provided</scope>
         </dependency>
+        <!-- MYSQL JDBC driver -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+            <scope>provided</scope>
+        </dependency>
         <!-- ODBC JDBC driver-->
         <!-- within JDK -->
         <!-- ORACLE JDBC driver -->
-        <!--<dependency>
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc7</artifactId>
+            <version>${oracle.12g1.versoin}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>${oracle.11g2.versoin}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>${oracle.11g1.versoin}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>com.oracle</groupId>
             <artifactId>ojdbc14</artifactId>
-            <version>10.2.0.4.0</version>
-        </dependency>-->
+            <version>${oracle.10g2.versoin}</version>
+            <scope>provided</scope>
+        </dependency>
         <!-- PostgreSQL JDBC driver -->
         <dependency>
             <groupId>org.postgresql</groupId>
@@ -194,24 +211,72 @@
             <version>${mongodb.version}</version>
             <scope>provided</scope>
         </dependency>
+        <!-- CouchDB driver-->
+
+        <!-- Other(Clusterpoint, Couchdb, Couchbase, MarkLogic) -->
 
         <!-- Graph -->
+        <!-- Other(Allegro, Neo4J, OrientDB, Virtuoso, Stardog) -->
 
         <!-- Key-value Store -->
+        <!-- Other(Dynamo, FoundationDB, MemcacheDB, Redis, Riak, FairCom c-treeACE) -->
 
         <!-- Object Database-->
+        <!-- db4o
+        GemStone/S
+        InterSystems Caché
+        JADE,
+        NeoDatis ODB
+        ObjectDatabase++
+        ObjectDB
+        Objectivity/DB
+        ObjectStore
+        ODABA
+        Perst
+        OpenLink Virtuoso
+        Versant Object Database
+        WakandaDB
+        ZODB -->
 
         <!-- Tabular -->
+        <!-- Apache Accumulo
+        BigTable
+        Apache Hbase
+        Hypertable
+        Mnesia
+        OpenLink Virtuoso -->
 
         <!-- Tuple store -->
+        <!-- GigaSpaces
+        Apache River
+        Tarantool
+        OpenLink Virtuoso -->
 
         <!-- Triple/Quad Store (RDF) database -->
+        <!-- Apache JENA
+        MarkLogic
+        Ontotext-OWLIM
+        Oracle NoSQL database
+        SparkleDB
+        Virtuoso Universal Server
+        Stardog -->
 
         <!-- Hosted -->
+        <!-- Amazon DynamoDB
+        Cloudant Data Layer (CouchDB)
+        Datastore on Google Appengine
+        Freebase
+        OpenLink Virtuoso-->
 
         <!-- Multivalue databases -->
-
-        <!-- Cell database -->
+        <!-- D3 Pick database
+        Extensible Storage Engine (ESE/NT)
+        InfinityDB
+        InterSystems Caché
+        Northgate Information Solutions Reality, the original Pick/MV Database
+        OpenQM
+        Revelation Software's OpenInsight
+        Rocket U2 -->
 
     </dependencies>
     <build>

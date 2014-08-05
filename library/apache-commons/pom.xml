@@ -8,6 +8,7 @@
         <groupId>bigfoot.framework.library</groupId>
         <artifactId>library</artifactId>
         <version>0.1.1.Alpha</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>apache-commons</artifactId>

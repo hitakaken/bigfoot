@@ -8,17 +8,15 @@
         <groupId>bigfoot.framework.library</groupId>
         <artifactId>library</artifactId>
         <version>0.1.1.Alpha</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>general-specs</artifactId>
+    <artifactId>spring-projects</artifactId>
     <packaging>pom</packaging>
-    <name>Bigfoot Framework :: Library :: General Specifications</name>
-    <description>常用Specifications类库组件集合，Geronimo、ServiceMix项目中提供的Bundle化的规范集合</description>
+    <name>Bigfoot Framework :: Library :: Spring Projects</name>
+    <description>Data Format类库组件集合，提供来自SpringSource开源项目的Features</description>
     <properties>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
-
     <dependencies>
         <!-- Karaf deps -->
         <dependency>
@@ -26,66 +24,7 @@
             <artifactId>org.apache.karaf.features.core</artifactId>
             <scope>provided</scope>
         </dependency>
-
-        <!-- javax activation 1.1 -->
-        <dependency>
-            <groupId>${javax.activation.bundle.groudId}</groupId>
-            <artifactId>${javax.activation.bundle.artifactId}</artifactId>
-            <version>${javax.activation.bundle.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- javax inject -->
-        <dependency>
-            <groupId>${javax.inject.bundle.groudId}</groupId>
-            <artifactId>${javax.inject.bundle.artifactId}</artifactId>
-            <version>${javax.inject.bundle.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- Annotation spec 1.1 API -->
-        <dependency>
-            <groupId>${javax.annotation.bundle.groudId}</groupId>
-            <artifactId>${javax.annotation.bundle.artifactId}</artifactId>
-            <version>${javax.annotation.bundle.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- Java EE Connector Architecture API Specification -->
-        <dependency>
-            <groupId>javax.resource</groupId>
-            <artifactId>connector-api</artifactId>
-            <version>${javax.resource.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <!-- Java EE Connector Architecture API -->
-        <dependency>
-            <groupId>javax.resource</groupId>
-            <artifactId>javax.resource-api</artifactId>
-            <version>${javax.resource-api.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <!-- Javax.transaction API -->
-        <dependency>
-            <groupId>javax.transaction</groupId>
-            <artifactId>javax.transaction-api</artifactId>
-            <version>${javax.transaction-api.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <!--<dependency>
-            <groupId>org.apache.geronimo.specs</groupId>
-            <artifactId>geronimo-el_2.2_spec</artifactId>
-            <version>1.0.4</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.geronimo.specs</groupId>
-            <artifactId>geronimo-el_1.0_spec</artifactId>
-            <version>1.0.2</version>
-        </dependency>-->
-
     </dependencies>
-
     <build>
         <plugins>
             <plugin>

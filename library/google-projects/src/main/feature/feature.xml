@@ -42,4 +42,8 @@
         <feature>aopalliance</feature>
         <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.guice/${google.guice.bundle.version}</bundle>
     </feature>
+
+    <feature name="gson" description="Google Gson library"  version="${google.gson.version}"  resolver="(obr)">
+        <bundle>mvn:com.google.code.gson/gson/${google.gson.version}</bundle>
+    </feature>
 </features>

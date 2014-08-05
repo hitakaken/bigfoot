@@ -7,11 +7,14 @@
       <module fileurl="file://$PROJECT_DIR$/assemblies/assemblies.iml" filepath="$PROJECT_DIR$/assemblies/assemblies.iml" />
       <module fileurl="file://$PROJECT_DIR$/bigfoot.iml" filepath="$PROJECT_DIR$/bigfoot.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/core-commons/core-commons.iml" filepath="$PROJECT_DIR$/library/core-commons/core-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/data-format/data-format.iml" filepath="$PROJECT_DIR$/library/data-format/data-format.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/general-drivers/general-drivers.iml" filepath="$PROJECT_DIR$/library/general-drivers/general-drivers.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/general-specs/general-specs.iml" filepath="$PROJECT_DIR$/library/general-specs/general-specs.iml" />
-      <module fileurl="file://$PROJECT_DIR$/library/google-commons/google-commons.iml" filepath="$PROJECT_DIR$/library/google-commons/google-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/google-projects/google-projects.iml" filepath="$PROJECT_DIR$/library/google-projects/google-projects.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/network-communication/network-communication.iml" filepath="$PROJECT_DIR$/library/network-communication/network-communication.iml" />
       <module fileurl="file://$PROJECT_DIR$/service/service.iml" filepath="$PROJECT_DIR$/service/service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/spring-projects/spring-projects.iml" filepath="$PROJECT_DIR$/library/spring-projects/spring-projects.iml" />
     </modules>
   </component>
 </project>

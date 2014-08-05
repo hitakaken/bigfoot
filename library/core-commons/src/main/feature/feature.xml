@@ -100,4 +100,25 @@
         </details>
         <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.antlr-runtime/${antlr.bundle.version}</bundle>
     </feature>
+
+    <feature name="slf4j-simple" description="" version="${slf4j.version}" resolver="(obr)">
+        <bundle>mvn:org.slf4j/slf4j-api/${slf4j.version}</bundle>
+        <bundle>mvn:org.slf4j/slf4j-simple/${slf4j.version}</bundle>
+    </feature>
+
+    <feature name="slf4j-jdk14" description="" version="${slf4j.version}" resolver="(obr)">
+        <bundle>mvn:org.slf4j/slf4j-api/${slf4j.version}</bundle>
+        <bundle>mvn:org.slf4j/slf4j-jdk14/${slf4j.version}</bundle>
+    </feature>
+
+    <feature name="slf4j-jcl" description="" version="${slf4j.version}" resolver="(obr)">
+        <bundle>mvn:org.slf4j/slf4j-api/${slf4j.version}</bundle>
+        <bundle>mvn:org.slf4j/slf4j-jdk14/${slf4j.version}</bundle>
+        <bundle>mvn:org.slf4j/jcl-over-slf4j/${slf4j.version}</bundle>
+    </feature>
+
+    <feature name="slf4j-log4j12" description="" version="${slf4j.version}" resolver="(obr)">
+        <bundle>mvn:org.slf4j/slf4j-api/${slf4j.version}</bundle>
+        <bundle>mvn:log4j/log4j/${log4j.version}</bundle>
+    </feature>
 </features>
