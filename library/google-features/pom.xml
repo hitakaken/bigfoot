@@ -153,7 +153,7 @@
         </dependency>
         <dependency>
             <groupId>org.apache.servicemix.bundles</groupId>
-            <artifactId>org.apache.servicemix.bundles.protobuf</artifactId>
+            <artifactId>org.apache.servicemix.bundles.protobuf-java</artifactId>
             <version>${google.protobuf.bundle.version}</version>
         </dependency>
 
