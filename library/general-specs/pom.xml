@@ -76,6 +76,12 @@
 
         <!--  JSR-303 Bean Validation Spec API -->
         <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>1.1.0.Final</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>${javax.validation.bundle.groudId}</groupId>
             <artifactId>${javax.validation.bundle.artifactId}</artifactId>
             <version>${javax.validation.bundle.version}</version>
