@@ -87,16 +87,26 @@
         <javax.resource.version>1.5</javax.resource.version>
         <javax.resource-api.version>1.7</javax.resource-api.version>
         <javax.transaction-api.version>1.2</javax.transaction-api.version>
-        <javax.validation.version>1.0</javax.validation.version>
+        <javax.validation.version>1.1.0.Final</javax.validation.version>
+        <!--<javax.validation.version>1.0.0.GA</javax.validation.version>
         <javax.validation.bundle.groudId>org.apache.geronimo.specs</javax.validation.bundle.groudId>
         <javax.validation.bundle.artifactId>geronimo-validation_1.0_spec</javax.validation.bundle.artifactId>
         <javax.validation.bundle.version>${geronimo.validation-spec.version}</javax.validation.bundle.version>
-        <geronimo.validation-spec.version>1.1</geronimo.validation-spec.version>
+        <geronimo.validation-spec.version>1.1</geronimo.validation-spec.version>-->
         <!-- Data Format(XML, Json, etc) Utilities-->
-        <org.json.version>20140107</org.json.version>
-        <org.json.bundle.version>20140107_1</org.json.bundle.version>
-        <!-- General Database Driver--><!-- As we use Java 7, So JDBC 4.1 is recommand-->
+        <ezmorph.version>1.0.6</ezmorph.version>
+        <ezmorph.bundle.version>1.0.6_1</ezmorph.bundle.version>
+        <json.version>20140107</json.version>
+        <json.bundle.version>20140107_1</json.bundle.version>
+        <json-lib.version>2.4</json-lib.version>
+        <json-lib.bundle.version>2.4_1</json-lib.bundle.version>
+        <!-- Network Communication Utilities -->
+        <apache.httpcomonents.version>4.3.2</apache.httpcomonents.version>
+        <!-- NoSql Database Driver-->
+        <mongodb.version>2.12.3</mongodb.version>
+        <!-- RDBMS Database Driver--><!-- As we use Java 7, So JDBC 4.1 is recommand-->
         <apache.derby.version>10.10.2.0</apache.derby.version>
+        <apache.derby.bundle.version>10.10.2.0_1</apache.derby.bundle.version>
         <jaybird.version>2.2.5</jaybird.version>
         <h2.version>1.4.180</h2.version>
         <hsqldb.version>2.3.2</hsqldb.version>
@@ -110,10 +120,9 @@
         <oracle.11g2.versoin>11.2.0.4</oracle.11g2.versoin>
         <oracle.12g1.versoin>12.1.0.2</oracle.12g1.versoin>
         <postgresql.version>9.3-1102-jdbc41</postgresql.version>
+        <postgresql.bundle.version>9.3-1100-jdbc41_1</postgresql.bundle.version>
         <sqlite.version>3.7.2</sqlite.version><!-- Wait for 3.8.x to Support JDBC 4.0-->
-        <mongodb.version>2.12.3</mongodb.version>
-        <!-- Network Communication Utilities -->
-        <apache.httpcomonents.version>4.3.3</apache.httpcomonents.version>
+
         <restlet.version>2.1.2</restlet.version>
         <!-- Apache Commons -->
         <apache.commons.bcel.version>5.2</apache.commons.bcel.version>
@@ -171,8 +180,14 @@
         <google.guice.bundle.version>3.0_1</google.guice.bundle.version>
         <google.gson.version>2.2.4</google.gson.version>
         <google.gwt.version>2.6.1</google.gwt.version>
-        <google.protobuf.version>2.5.0</google.protobuf.version>
-        <google.zxing.version>3.1.0</google.zxing.version>
+        <google.gwt.bundle.version>2.6.0_1</google.gwt.bundle.version><!-- wait for 2.6.1 -->
+        <google.protobuf.version>2.4.1</google.protobuf.version>
+        <google.protobuf.bundle.version>2.4.1_1</google.protobuf.bundle.version><!-- wait for 2.5.0 -->
+        <google.zxing.version>3.0.1</google.zxing.version>
+        <google.zxing.bundle.version>3.0.1_1</google.zxing.bundle.version><!-- wait for 3.1.0 -->
+        <!-- Spring Projects -->
+        <spring.version>4.0.5.RELEASE</spring.version>
+        <spring.bundle.version>4.0.5.RELEASE_1</spring.bundle.version>
         <!-- Test 相关-->
         <easymock.version>3.2</easymock.version>
         <!-- Furter used maven plugin versions; e.g. in the docs -->
@@ -737,56 +752,56 @@
             <!-- Bigfoot Framework deps -->
             <dependency>
                 <groupId>bigfoot.framework.library</groupId>
-                <artifactId>core-commons</artifactId>
+                <artifactId>core-features</artifactId>
                 <type>xml</type>
                 <classifier>features</classifier>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>bigfoot.framework.library</groupId>
-                <artifactId>general-specs</artifactId>
+                <artifactId>specs-features</artifactId>
                 <type>xml</type>
                 <classifier>features</classifier>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>bigfoot.framework.library</groupId>
-                <artifactId>data-format</artifactId>
+                <artifactId>data-features</artifactId>
                 <type>xml</type>
                 <classifier>features</classifier>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>bigfoot.framework.library</groupId>
-                <artifactId>general-drivers</artifactId>
+                <artifactId>nosql-features</artifactId>
                 <type>xml</type>
                 <classifier>features</classifier>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>bigfoot.framework.library</groupId>
-                <artifactId>network-communication</artifactId>
+                <artifactId>rdbms-features</artifactId>
                 <type>xml</type>
                 <classifier>features</classifier>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>bigfoot.framework.library</groupId>
-                <artifactId>apache-commons</artifactId>
+                <artifactId>apache-commons-features</artifactId>
                 <type>xml</type>
                 <classifier>features</classifier>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>bigfoot.framework.library</groupId>
-                <artifactId>google-projects</artifactId>
+                <artifactId>google-features</artifactId>
                 <type>xml</type>
                 <classifier>features</classifier>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>bigfoot.framework.library</groupId>
-                <artifactId>spring-projects</artifactId>
+                <artifactId>spring-features</artifactId>
                 <type>xml</type>
                 <classifier>features</classifier>
                 <version>${project.version}</version>

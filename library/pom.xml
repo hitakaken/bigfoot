@@ -21,24 +21,25 @@
     <modules>
         <!-- Low Level -->
         <!-- Generate Utilities -->
-        <module>core-commons</module>
+        <module>core-features</module>
         <!-- General Specifications-->
-        <module>general-specs</module>
+        <module>specs-features</module>
 
         <!-- Feature Classify -->
         <!-- Data Format(XML, Json, etc) Utilities-->
-        <module>data-format</module>
-        <!-- General Database Drivers-->
-        <module>general-drivers</module>
+        <module>data-features</module>
         <!-- Network Communication Utilities -->
-        <module>network-communication</module>
+        <module>network-features</module>
+        <!-- General Database Drivers-->
+        <module>nosql-features</module>
+        <module>rdbms-features</module>
 
         <!-- Organization Classify -->
         <!-- Apache Commons-->
-        <module>apache-commons</module>
+        <module>apache-commons-features</module>
         <!-- Google Open Source Utilities-->
-        <module>google-projects</module>
+        <module>google-features</module>
         <!-- Spring Projects -->
-        <module>spring-projects</module>
+        <module>spring-features</module>
     </modules>
 </project>

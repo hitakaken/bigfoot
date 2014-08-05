@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+      Licensed to the Apache Software Foundation (ASF) under one or more
+      contributor license agreements.  See the NOTICE file distributed with
+      this work for additional information regarding copyright ownership.
+      The ASF licenses this file to You under the Apache License, Version 2.0
+      (the "License"); you may not use this file except in compliance with
+      the License.  You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+      Unless required by applicable law or agreed to in writing, software
+      distributed under the License is distributed on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+      See the License for the specific language governing permissions and
+      limitations under the License.
+-->
+<features name="library-core-features-${project.version}"
+          xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="
+          http://karaf.apache.org/xmlns/features/v1.2.0 http://karaf.apache.org/xmlns/features/v1.2.0">
+    <feature name="javassist" description="Javassist: JAVA programming ASSISTant" version="${javassist.version}"  resolver="(obr)">
+        <details>
+            Javassist (JAVA programming ASSISTant) makes Java bytecode manipulation simple. It is a class library for editing bytecodes in Java.
+        </details>
+        <bundle>mvn:org.javassist/javassist/${javassist.version}</bundle>
+    </feature>
+
+    <feature name="aopalliance" description="AOP Alliance" version="${aopalliance.version}"  resolver="(obr)">
+        <details>
+            url:http://sourceforge.net/projects/aopalliance/
+            We believe that Aspect-Oriented Programming (AOP) offers a better solution to many problems than do existing technologies such as EJB. The AOP Alliance aims to ensure interoperability between Java/J2EE AOP implementations to build a larger AOP community.
+        </details>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aopalliance/${aopalliance.bundle.version}</bundle>
+    </feature>
+
+    <feature name="asm" description="ASM: a code manipulation tool to implement adaptable systems" version="${asm.version}"  resolver="(obr)">
+        <details>
+            url:http://asm.ow2.org/
+            ASM is an all purpose Java bytecode manipulation and analysis framework. It can be used to modify existing classes or dynamically generate classes, directly in binary form. Provided common transformations and analysis algorithms allow to easily assemble custom complex transformations and code analysis tools.
+            ASM offer similar functionality as other bytecode frameworks, but it is focused on simplicity of use and performance. Because it was designed and implemented to be as small and as fast as possible, it makes it very attractive for using in dynamic systems.
+        </details>
+        <bundle>mvn:org.ow2.asm/asm/${asm.version}</bundle>
+    </feature>
+
+    <feature name="aspectj" description="AspectJ: a seamless aspect-oriented extension to Java" version="${aspectj.version}"  resolver="(obr)">
+        <details>
+            url:http://www.eclipse.org/aspectj/
+            AspectJ is a seamless aspect-oriented extension to the Java™ programming language. It is Java platform compatible easy to learn and use.
+        </details>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aspectj/${aspectj.bundle.version}</bundle>
+    </feature>
+
+    <feature name="cglib" description="CGLIB: Code Generation Library" version="${cglib.version}"  resolver="(obr)">
+        <details>
+            url:https://github.com/cglib/cglib
+            Byte Code Generation Library is high level API to generate and transform JAVA byte code.
+            It is used by AOP, testing, data access frameworks to generate dynamic proxy objects and intercept field access.
+        </details>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.cglib/${cglib.bundle.version}</bundle>
+    </feature>
+
+    <feature name="concurrent" description="Utils for Concurrent Programming" version="${concurrent.version}"  resolver="(obr)">
+        <details>
+            url:http://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/concurrent/intro.html
+            This package provides standardized, efficient versions of utility classes commonly encountered in concurrent Java programming. This code consists of implementations of ideas that have been around for ages, and is merely intended to save you the trouble of coding them. Discussions of the rationale and applications of several of these classes can be found in the second edition of Concurrent Programming in Java. There are also pdf slides providing an overview of the package.
+        </details>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.concurrent/${concurrent.bundle.version}</bundle>
+    </feature>
+
+    <feature name="ecj" description="Eclipse ECJ: Eclipse JDT Core Batch Compiler" version="${eclipse.ecj.version}"  resolver="(obr)">
+        <bundle>mvn:org.eclipse.jdt.core.compiler/ecj/${eclipse.ecj.version}</bundle>
+    </feature>
+
+    <feature name="groovy" description="Groovy: A powerful, dynamic language for the JVM" version="${groovy.version}"  resolver="(obr)">
+        <bundle>mvn:org.codehaus.groovy/groovy-all/${groovy.version}</bundle>
+    </feature>
+
+    <feature name="janino" description="Janino: a Java Compiler" version="${janino.version}"  resolver="(obr)">
+        <details>
+            Janino is a compiler that reads a JavaTM expression, block, class body, source file or a set of source files, and generates JavaTM bytecode that is loaded and executed directly. Janino is not intended to be a development tool, but an embedded compiler for run-time compilation purposes, e.g. expression evaluators or "server pages" engines like JSP.
+        </details>
+        <bundle>wrap:mvn:org.codehaus.janino/commons-compiler/${janino.version}</bundle>
+        <bundle>wrap:mvn:org.codehaus.janino/commons-compiler-jdk/${janino.version}</bundle>
+        <bundle>wrap:mvn:org.codehaus.janino/janino/${janino.version}</bundle>
+    </feature>
+
+    <feature name="rhino" description="Mozilla Rhino: an open-source implementation of JavaScript written entirely in Java" version="${rhino.version}"  resolver="(obr)">
+        <details>
+            Rhino is an open-source implementation of JavaScript written entirely in Java. It is typically embedded into Java applications to provide scripting to end users.
+        </details>
+        <bundle>wrap:mvn:org.mozilla/rhino/${rhino.version}</bundle>
+    </feature>
+
+    <feature name="antlr-runtime" description="ANTLR 3 Runtime" version="${antlr.version}"  resolver="(obr)">
+        <details>
+            A framework for constructing recognizers, compilers, and translators from grammatical descriptions containing Java, C#, C++, or Python actions.
+        </details>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.antlr-runtime/${antlr.bundle.version}</bundle>
+    </feature>
+
+    <feature name="slf4j" description="The slf4j API" version="${slf4j.version}" resolver="(obr)">
+        <bundle>mvn:org.slf4j/slf4j-api/${slf4j.version}</bundle>
+    </feature>
+
+    <feature name="slf4j-simple" description="SLF4J Simple binding" version="${slf4j.version}" resolver="(obr)">
+        <feature>slf4j</feature>
+        <bundle>mvn:org.slf4j/slf4j-simple/${slf4j.version}</bundle>
+    </feature>
+
+    <feature name="slf4j-jdk14" description="SLF4J JDK14 Binding" version="${slf4j.version}" resolver="(obr)">
+        <feature>slf4j</feature>
+        <bundle>mvn:org.slf4j/slf4j-jdk14/${slf4j.version}</bundle>
+    </feature>
+
+    <feature name="slf4j-jcl" description="JCL 1.1.1 implemented over SLF4J" version="${slf4j.version}" resolver="(obr)">
+        <feature>slf4j</feature>
+        <bundle>mvn:org.slf4j/slf4j-jdk14/${slf4j.version}</bundle>
+        <bundle>mvn:org.slf4j/jcl-over-slf4j/${slf4j.version}</bundle>
+    </feature>
+
+    <feature name="slf4j-log4j12" description="SLF4J LOG4J-12 Binding" version="${slf4j.version}" resolver="(obr)">
+        <feature>slf4j</feature>
+        <bundle>mvn:log4j/log4j/${log4j.version}</bundle>
+    </feature>
+</features>
