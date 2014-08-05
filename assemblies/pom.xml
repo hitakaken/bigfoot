@@ -14,5 +14,8 @@
     <artifactId>assemblies</artifactId>
     <packaging>pom</packaging>
     <name>Bigfoot Framework :: Assemblies</name>
-    
+
+    <modules>
+
+    </modules>
 </project>

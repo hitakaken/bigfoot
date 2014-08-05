@@ -40,6 +40,13 @@
             <type>xml</type>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>bigfoot.framework.library</groupId>
+            <artifactId>data-format</artifactId>
+            <classifier>features</classifier>
+            <type>xml</type>
+            <scope>provided</scope>
+        </dependency>
 
         <!-- Google Guava -->
         <dependency>

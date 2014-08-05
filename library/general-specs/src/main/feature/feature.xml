@@ -46,5 +46,9 @@
         <bundle>mvn:javax.transaction/javax.transaction-api/${javax.transaction-api.version}</bundle>
     </feature>
 
+    <feature name="javax-validation" description="JSR-303 Bean Validation Spec API" version="${javax.validation.version}"  resolver="(obr)">
+        <bundle>mvn:${javax.validation.bundle.groupId}/${javax.validation.bundle.artifactId}/${javax.validation.bundle.version}</bundle>
+    </feature>
+
 
 </features>

@@ -25,6 +25,12 @@
             <artifactId>org.apache.karaf.features.core</artifactId>
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>${apache.httpcomonents.version}</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

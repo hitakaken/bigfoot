@@ -75,18 +75,26 @@
         <javax.activation.bundle.artifactId>geronimo-activation_1.1_spec</javax.activation.bundle.artifactId>
         <javax.activation.bundle.version>${geronimo.activation-spec.version}</javax.activation.bundle.version>
         <geronimo.activation-spec.version>1.1</geronimo.activation-spec.version>
-        <javax.inject.version>1</javax.inject.version>
-        <javax.inject.bundle.groudId>org.apache.servicemix.bundles</javax.inject.bundle.groudId>
-        <javax.inject.bundle.artifactId>org.apache.servicemix.bundles.javax-inject</javax.inject.bundle.artifactId>
-        <javax.inject.bundle.version>1_2</javax.inject.bundle.version>
         <javax.annotation.version>1.1</javax.annotation.version>
         <javax.annotation.bundle.groudId>org.apache.geronimo.specs</javax.annotation.bundle.groudId>
         <javax.annotation.bundle.artifactId>geronimo-annotation_1.1_spec</javax.annotation.bundle.artifactId>
         <javax.annotation.bundle.version>${geronimo.annotation-spec.version}</javax.annotation.bundle.version>
         <geronimo.annotation-spec.version>1.0.1</geronimo.annotation-spec.version>
+        <javax.inject.version>1</javax.inject.version>
+        <javax.inject.bundle.groudId>org.apache.servicemix.bundles</javax.inject.bundle.groudId>
+        <javax.inject.bundle.artifactId>org.apache.servicemix.bundles.javax-inject</javax.inject.bundle.artifactId>
+        <javax.inject.bundle.version>1_2</javax.inject.bundle.version>
         <javax.resource.version>1.5</javax.resource.version>
         <javax.resource-api.version>1.7</javax.resource-api.version>
         <javax.transaction-api.version>1.2</javax.transaction-api.version>
+        <javax.validation.version>1.0</javax.validation.version>
+        <javax.validation.bundle.groudId>org.apache.geronimo.specs</javax.validation.bundle.groudId>
+        <javax.validation.bundle.artifactId>geronimo-validation_1.0_spec</javax.validation.bundle.artifactId>
+        <javax.validation.bundle.version>${geronimo.validation-spec.version}</javax.validation.bundle.version>
+        <geronimo.validation-spec.version>1.1</geronimo.validation-spec.version>
+        <!-- Data Format(XML, Json, etc) Utilities-->
+        <org.json.version>20140107</org.json.version>
+        <org.json.bundle.version>20140107_1</org.json.bundle.version>
         <!-- General Database Driver--><!-- As we use Java 7, So JDBC 4.1 is recommand-->
         <apache.derby.version>10.10.2.0</apache.derby.version>
         <jaybird.version>2.2.5</jaybird.version>
@@ -104,6 +112,9 @@
         <postgresql.version>9.3-1102-jdbc41</postgresql.version>
         <sqlite.version>3.7.2</sqlite.version><!-- Wait for 3.8.x to Support JDBC 4.0-->
         <mongodb.version>2.12.3</mongodb.version>
+        <!-- Network Communication Utilities -->
+        <apache.httpcomonents.version>4.3.3</apache.httpcomonents.version>
+        <restlet.version>2.1.2</restlet.version>
         <!-- Apache Commons -->
         <apache.commons.bcel.version>5.2</apache.commons.bcel.version>
         <apache.commons.bcel.bundle.version>5.2_4</apache.commons.bcel.bundle.version>
@@ -292,7 +303,14 @@
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
-        </repository>        
+        </repository>
+
+        <!-- Restlet repository -->
+        <repository>
+            <id>maven-restlet</id>
+            <name>Restlet repository</name>
+            <url>http://maven.restlet.com</url>
+        </repository>
     </repositories>
 
 	<pluginRepositories>
