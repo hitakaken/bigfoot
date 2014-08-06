@@ -76,7 +76,10 @@
         <javax.activation.bundle.artifactId>geronimo-activation_1.1_spec</javax.activation.bundle.artifactId>
         <javax.activation.bundle.version>${geronimo.activation-spec.version}</javax.activation.bundle.version>
         <geronimo.activation-spec.version>1.1</geronimo.activation-spec.version>
+        <jpa.version>2.0</jpa.version>
+        <jpa.bundle.version>1.1</jpa.bundle.version>
         <javax.annotation.version>1.1</javax.annotation.version>
+        <javax.annotation.rc3.version>1.2-b02</javax.annotation.rc3.version>
         <javax.annotation.bundle.groudId>org.apache.geronimo.specs</javax.annotation.bundle.groudId>
         <javax.annotation.bundle.artifactId>geronimo-annotation_1.1_spec</javax.annotation.bundle.artifactId>
         <javax.annotation.bundle.version>${geronimo.annotation-spec.version}</javax.annotation.bundle.version>
@@ -93,7 +96,12 @@
         <jaxrs.bundle.version>1.0</jaxrs.bundle.version>
         <jsr311-api.version>1.1.1</jsr311-api.version>
         <javax.ws.rs-api.version>2.0</javax.ws.rs-api.version>
+        <javax.ws.metadata.version>2.0</javax.ws.metadata.version>
+        <javax.ws.metadata.bundle.version>1.1.3</javax.ws.metadata.bundle.version>
         <javax.json.version>1.0</javax.json.version>
+        <servicemix.specs.version>2.4.0</servicemix.specs.version>
+        <jain-sip-api.version>1.2.1.4</jain-sip-api.version>
+        <javax.jcr.version>2.0</javax.jcr.version>
         <!--<javax.validation.version>1.0.0.GA</javax.validation.version>
         <javax.validation.bundle.groudId>org.apache.geronimo.specs</javax.validation.bundle.groudId>
         <javax.validation.bundle.artifactId>geronimo-validation_1.0_spec</javax.validation.bundle.artifactId>

@@ -210,6 +210,77 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- Jackson Module -->
+        <!-- Jackson Module JAXB Annotations -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-jaxb-annotations</artifactId>
+            <version>${jackson2.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicemix.specs</groupId>
+            <artifactId>org.apache.servicemix.specs.jaxb-api-2.2</artifactId>
+            <version>${servicemix.specs.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicemix.specs</groupId>
+            <artifactId>org.apache.servicemix.specs.stax-api-1.0</artifactId>
+            <version>${servicemix.specs.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-activation_1.1_spec</artifactId>
+            <version>${javax.activation.bundle.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Jackson Module JsonSchema -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-jsonSchema</artifactId>
+            <version>${jackson2.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Jackson Module Scala -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-scala_2.11</artifactId>
+            <version>${jackson2.version}</version>
+        </dependency>
+        <!-- Jackson Module Afterburner -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-afterburner</artifactId>
+            <version>${jackson2.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Jackson Module Mr.Bean -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-mrbean</artifactId>
+            <version>${jackson2.version}</version>
+        </dependency>
+        <!-- Jackson Module Guice -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-guice</artifactId>
+            <version>${jackson2.version}</version>
+        </dependency>
+        <!-- Jackson Module Parameter Names -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-parameter-names</artifactId>
+            <version>${jackson2.version}</version>
+        </dependency>
+        <!-- Jackson Module Paranamer -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-paranamer</artifactId>
+            <version>${jackson2.version}</version>
+        </dependency>
+
         <!-- Jackson Dataformat -->
         <!-- Jackson Dataformat Smile -->
         <dependency>
@@ -248,56 +319,6 @@
             <version>${jackson2.version}</version>
         </dependency>
 
-        <!-- Jackson Module -->
-        <!-- Jackson Module JAXB Annotations -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.module</groupId>
-            <artifactId>jackson-module-jaxb-annotations</artifactId>
-            <version>${jackson2.version}</version>
-        </dependency>
-        <!-- Jackson Module JsonSchema -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.module</groupId>
-            <artifactId>jackson-module-jsonSchema</artifactId>
-            <version>${jackson2.version}</version>
-        </dependency>
-        <!-- Jackson Module Scala -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.module</groupId>
-            <artifactId>jackson-module-scala_2.11</artifactId>
-            <version>${jackson2.version}</version>
-        </dependency>
-        <!-- Jackson Module Afterburner -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.module</groupId>
-            <artifactId>jackson-module-afterburner</artifactId>
-            <version>${jackson2.version}</version>
-        </dependency>
-        <!-- Jackson Module Mr.Bean -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.module</groupId>
-            <artifactId>jackson-module-mrbean</artifactId>
-            <version>${jackson2.version}</version>
-        </dependency>
-        <!-- Jackson Module Guice -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.module</groupId>
-            <artifactId>jackson-module-guice</artifactId>
-            <version>${jackson2.version}</version>
-        </dependency>
-        <!-- Jackson Module Parameter Names -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.module</groupId>
-            <artifactId>jackson-module-parameter-names</artifactId>
-            <version>${jackson2.version}</version>
-        </dependency>
-        <!-- Jackson Module Paranamer -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.module</groupId>
-            <artifactId>jackson-module-paranamer</artifactId>
-            <version>${jackson2.version}</version>
-        </dependency>
-
         <!-- Jackson JAXRS -->
         <!-- Jackson JAXRS JSON -->
         <dependency>
@@ -315,12 +336,6 @@
         <dependency>
             <groupId>com.fasterxml.jackson.jaxrs</groupId>
             <artifactId>jackson-jaxrs-base</artifactId>
-            <version>${jackson2.version}</version>
-        </dependency>
-        <!-- Jackson JAX RS -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.jaxrs</groupId>
-            <artifactId>jackson-jaxrs-providers</artifactId>
             <version>${jackson2.version}</version>
         </dependency>
         <!-- Jackson JAXRS Smile -->

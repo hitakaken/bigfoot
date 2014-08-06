@@ -33,6 +33,10 @@
         <bundle>mvn:${javax.annotation.bundle.groupId}/${javax.annotation.bundle.artifactId}/${javax.annotation.bundle.version}</bundle>
     </feature>
 
+    <feature name="jpa" description="JSR 317 JPA 2.0 Spec API" version="${jpa.version}"  resolver="(obr)">
+        <bundle>mvn:org.apache.geronimo.specs/geronimo-jpa_2.0_spec/${jpa.bundle.version}</bundle>
+    </feature>
+
     <feature name="javax-resource" description="Java EE Connector Architecture API Specification" version="${javax.resource.version}"  resolver="(obr)">
         <bundle>wrap:mvn:javax.resource/connector-api/${javax.resource.version}</bundle>
     </feature>
@@ -50,14 +54,18 @@
         <bundle>mvn:javax.validation/validation-api/${javax.validation.version}</bundle>
     </feature>
 
-    <feature name="jaxrs" description="JSR-311 (JAX RS) Java API for RESTful Web Services Spec API" version="${jaxrs.version}"  resolver="(obr)">
+    <feature name="jaxrs-1.0" description="JSR-311 (JAX RS) Java API for RESTful Web Services Spec API" version="${jaxrs.version}"  resolver="(obr)">
         <bundle>mvn:org.apache.geronimo.specs/geronimo-jaxrs_1.1_spec/${jaxrs.bundle.version}</bundle>
     </feature>
-    <feature name="jaxrs" description="JSR-311 (JAX RS) Java API for RESTful Web Services Spec API" version="${jsr311-api.version}"  resolver="(obr)">
+    <feature name="jaxrs-1.1.1" description="JSR-311 (JAX RS) Java API for RESTful Web Services Spec API" version="${jsr311-api.version}"  resolver="(obr)">
         <bundle>mvn:javax.ws.rs/jsr311-api/${jsr311-api.version}</bundle>
     </feature>
-    <feature name="jaxrs" description="JSR-311 (JAX RS) Java API for RESTful Web Services Spec API" version="${javax.ws.rs-api.version}"  resolver="(obr)">
+    <feature name="jaxrs-2.0" description="JSR-311 (JAX RS) Java API for RESTful Web Services Spec API" version="${javax.ws.rs-api.version}"  resolver="(obr)">
         <bundle>mvn:javax.ws.rs/javax.ws.rs-api/${javax.ws.rs-api.version}</bundle>
+    </feature>
+
+    <feature name="javax-ws-metadata" description="Web Services Metadata 2.0 API" version="${javax.ws.metadata.version}" resolver="(obr)">
+        <bundle>mvn:org.apache.geronimo.specs/geronimo-ws-metadata_2.0_spec/${javax.ws.metadata.bundle.version}</bundle>
     </feature>
 
     <feature name="javax-json" description="JSR 353 (JSON Processing) API" version="${javax.json.version}"  resolver="(obr)">
@@ -65,4 +73,129 @@
         <bundle>mvn:javax.json/javax.json-api/${javax.json.version}</bundle>
     </feature>
 
+    <feature name="jbi-api-1.0" description="Apache ServiceMix :: Specs :: JBI API 1.0" version="${servicemix.specs.version}" resolver="(obr)">
+        <feature>javax-activation</feature>
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jbi-api-1.0/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="saaj-api-1.3" description="Apache ServiceMix :: Specs :: SAAJ API 1.3" version="${servicemix.specs.version}" resolver="(obr)">
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.saaj-api-1.3/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="stax-api-1.0" description="Apache ServiceMix :: Specs :: Stax API 1.0" version="${servicemix.specs.version}" resolver="(obr)">
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.stax-api-1.0/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="jaxb-api-2.1" description="Apache ServiceMix :: Specs :: JAXB API 2.1" version="${servicemix.specs.version}" resolver="(obr)">
+        <feature>stax-api-1.0</feature>
+        <feature>javax-activation</feature>
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jaxb-api-2.1/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="jaxb-api-2.2" description="Apache ServiceMix :: Specs :: JAXB API 2.2" version="${servicemix.specs.version}" resolver="(obr)">
+        <feature>stax-api-1.0</feature>
+        <feature>javax-activation</feature>
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jaxb-api-2.2/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="activation-api-1.1" description="Apache ServiceMix :: Specs :: Activation API 1.4" version="${servicemix.specs.version}" resolver="(obr)">
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.activation-api-1.1/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="jsr311-api-1.0" description="Apache ServiceMix :: Specs :: JSR 311 API 1.0" version="${servicemix.specs.version}" resolver="(obr)">
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jsr311-api-1.0/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="jaxp-api-1.4" description="Apache ServiceMix :: Specs :: JAXP API 1.4" version="${servicemix.specs.version}" resolver="(obr)">
+        <feature>stax-api-1.2</feature>
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jaxp-api-1.4/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="jaxws-api-2.2" description="Apache ServiceMix :: Specs :: JAXWS API 2.2" version="${servicemix.specs.version}" resolver="(obr)">
+        <feature>jaxb-api-2.2</feature>
+        <feature>saaj-api-1.3</feature>
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jaxws-api-2.2/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="jsr311-api-1.1.1" description="Apache ServiceMix :: Specs :: JSR 311 API 1.1.1" version="${servicemix.specs.version}" resolver="(obr)">
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jsr311-api-1.1.1/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="jsr303-api-1.0.0" description="Apache ServiceMix :: Specs :: JSR 303 API 1.0.0" version="${servicemix.specs.version}" resolver="(obr)">
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jsr303-api-1.0.0/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="jsr250-1.0" description="Apache ServiceMix :: Specs :: JSR 250 1.0" version="${servicemix.specs.version}" resolver="(obr)">
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jsr250-1.0/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="jsr311-api-1.1" description="Apache ServiceMix :: Specs :: JSR 311 API 1.1" version="${servicemix.specs.version}" resolver="(obr)">
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jsr311-api-1.1/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="jaxws-api-2.1" description="Apache ServiceMix :: Specs :: JAXWS API 2.1" version="${servicemix.specs.version}" resolver="(obr)">
+        <feature>jaxb-api-2.1</feature>
+        <feature>saaj-api-1.3</feature>
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jaxws-api-2.1/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="jsr339-api-m10" description="Apache ServiceMix :: Specs :: JSR 339 API M10" version="${servicemix.specs.version}" resolver="(obr)">
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jsr339-api-m10/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="activator" description="Apache ServiceMix :: Specs :: Activator" version="${servicemix.specs.version}" resolver="(obr)">
+        <feature>activation-api-1.1</feature>
+        <feature>javax-activation</feature>
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.activator/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="locator" description="Apache ServiceMix :: Specs :: Locator" version="${servicemix.specs.version}" resolver="(obr)">
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.locator/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="javamail-api-1.4" description="Apache ServiceMix :: Specs :: JavaMail API 1.4" version="${servicemix.specs.version}" resolver="(obr)">
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.javamail-api-1.4/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="jaxb-api-2.0" description="Apache ServiceMix :: Specs :: JAXB API 2.0" version="${servicemix.specs.version}" resolver="(obr)">
+        <feature>stax-api-1.0</feature>
+        <feature>javax-activation</feature>
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jaxb-api-2.0/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="stax-api-1.2" description="Apache ServiceMix :: Specs :: Stax API 1.2" version="${servicemix.specs.version}" resolver="(obr)">
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.stax-api-1.2/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="jsr339-api-2.0" description="Apache ServiceMix :: Specs :: JSR 339 API 2.0" version="${servicemix.specs.version}" resolver="(obr)">
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jsr339-api-2.0/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="scripting-api-1.0" description="Apache ServiceMix :: Specs :: Scripting API 1.0" version="${servicemix.specs.version}" resolver="(obr)">
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.scripting-api-1.0/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="java-persistence-api-2.0" description="Apache ServiceMix :: Specs :: Java Persistence API 2.0" version="${servicemix.specs.version}" resolver="(obr)">
+        <feature>jpa</feature>
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.java-persistence-api-2.0/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="java-persistence-api-1.1.1" description="Apache ServiceMix :: Specs :: Java Persistence API 1.4" version="${servicemix.specs.version}" resolver="(obr)">
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.java-persistence-api-1.1.1/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="jain-sip-api-1.2" description="Apache ServiceMix :: Specs :: SIP API 1.2" version="${servicemix.specs.version}" resolver="(obr)">
+        <bundle>wrap:mvn:javax.sip/jain-sip-api/1.2</bundle>
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jain-sip-api-1.2/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="jsr339-api-rc3" description="Apache ServiceMix :: Specs :: JSR 339 API M13" version="${servicemix.specs.version}" resolver="(obr)">
+        <bundle>mvn:javax.annotation/javax.annotation-api/${javax.annotation.rc3.version}</bundle>
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jsr339-api-rc3/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="jsr339-api-m13" description="Apache ServiceMix :: Specs :: JSR 339 API M13" version="${servicemix.specs.version}" resolver="(obr)">
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jsr339-api-m13/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="jcr-api-2.0" description="Apache ServiceMix :: Specs :: JCR API 2.0" version="${servicemix.specs.version}" resolver="(obr)">
+        <bundle>mvn:javax.jcr/jcr/${javax.jcr.version}</bundle>
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jcr-api-2.0/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="jaxws-api-2.0" description="Apache ServiceMix :: Specs :: JAXWS API 2.0" version="${servicemix.specs.version}" resolver="(obr)">
+        <feature>jaxb-api-2.0</feature>
+        <feature>saaj-api-1.3</feature>
+        <feature>javax-ws-metadata</feature>
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jaxws-api-2.0/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="jaxp-api-1.3" description="Apache ServiceMix :: Specs :: JAXP API 1.3" version="${servicemix.specs.version}" resolver="(obr)">
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jaxp-api-1.3/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="jain-sip-api-1.2.1" description="Apache ServiceMix :: Specs :: SIP API 1.2.1" version="${servicemix.specs.version}" resolver="(obr)">
+        <bundle>wrap:mvn:javax.sip/jain-sip-api/1.2.1</bundle>
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jain-sip-api-1.2.1/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="annotation-api-1.2" description="Apache ServiceMix :: Specs :: Annotation API 1.2" version="${servicemix.specs.version}" resolver="(obr)">
+        <feature>locator</feature>
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.annotation-api-1.2/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="jsr311-api-0.8" description="Apache ServiceMix :: Specs :: JSR 311 API 0.8" version="${servicemix.specs.version}" resolver="(obr)">
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jsr311-api-0.8/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="jsr303-api-1.1.0" description="Apache ServiceMix :: Specs :: JSR 303 API 1.1.0" version="${servicemix.specs.version}" resolver="(obr)">
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jsr303-api-1.1.0/${servicemix.specs.version}</bundle>
+    </feature>
 </features>

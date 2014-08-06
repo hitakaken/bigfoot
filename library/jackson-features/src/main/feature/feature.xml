@@ -129,4 +129,35 @@
         <bundle>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jdk7/${jackson2.version}</bundle>
     </feature>
 
+    <feature name="jackson-module-jaxb-annotations" description="Jackson Module JAXB Annotations" version="${jackson2.version}" resolver="(obr)">
+        <details>Support for using JAXB annotations as an alternative to "native" Jackson annotations, for configuring data binding.</details>
+        <feature version="${jackson2.version}">jackson-databind</feature>
+        <feature>jaxb-api-2.2</feature>
+        <bundle>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2.version}</bundle>
+    </feature>
+
+    <feature name="jackson-module-jsonSchema" description="Jackson Module JsonSchema" version="${jackson2.version}" resolver="(obr)">
+        <details>Add-on module for Jackson (http://jackson.codehaus.org) to support JSON Schema (http://tools.ietf.org/html/draft-zyp-json-schema-03) version 3 generation.</details>
+        <feature version="${jackson2.version}">jackson-databind</feature>
+        <bundle>mvn:com.fasterxml.jackson.module/jackson-module-jsonSchema/${jackson2.version}</bundle>
+    </feature>
+
+    <feature name="jackson-module-afterburner" description="Jackson Module Afterburner" version="${jackson2.version}" resolver="(obr)">
+        <details>Jackson (https://github.com/FasterXML/jackson) extension module used to enhance access functionality using bytecode generation.</details>
+        <feature version="${jackson2.version}">jackson-databind</feature>
+        <bundle>mvn:com.fasterxml.jackson.module/jackson-module-afterburner/${jackson2.version}</bundle>
+    </feature>
+
+    <feature name="jackson-dataformat-smile" description="Jackson Dataformat Smile" version="${jackson2.version}" resolver="(obr)">
+        <details>Support for reading and writing Smile ("binary JSON") encoded data using Jackson abstractions (streaming API, data binding, tree model)</details>
+        <feature version="${jackson2.version}">jackson-core</feature>
+        <bundle>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-smile/${jackson2.dataformat.smile.version}</bundle>
+    </feature>
+
+    <feature name="jackson-dataformat-xml" description="Jackson Dataformat XML" version="${jackson2.version}" resolver="(obr)">
+        <details>Data format extension for Jackson (http://jackson.codehaus.org) to offer alternative support for serializing POJOs as XML and deserializing XML as pojos. Support implemented on top of Stax API (javax.xml.stream), by implementing core Jackson Streaming API types like JsonGenerator, JsonParser and JsonFactory. Some data-binding types overridden as well (ObjectMapper sub-classed as XmlMapper).</details>
+        <feature version="${jackson2.version}">jackson-databind</feature>
+        <bundle>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2.version}</bundle>
+    </feature>
+
 </features>
