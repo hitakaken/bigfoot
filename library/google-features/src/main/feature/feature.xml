@@ -50,7 +50,23 @@
     <feature name="gwt-user" description="Gwt User"  version="${google.gwt.version}"  resolver="(obr)">
         <feature>javax-validation</feature>
         <feature>json</feature>
-        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.gwt/${google.gwt.bundle.version}</bundle>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.gwt-user/${google.gwt.bundle.version}</bundle>
+    </feature>
+
+    <feature name="gwt-dev" description="Gwt Dev"  version="${google.gwt.version}"  resolver="(obr)">
+        <feature>json</feature>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.gwt-dev/${google.gwt.bundle.version}</bundle>
+    </feature>
+
+    <feature name="gwt-servlet" description="Gwt Servlet"  version="${google.gwt.version}"  resolver="(obr)">
+        <feature>javax-validation</feature>
+        <feature>json</feature>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.gwt-servlet/${google.gwt.bundle.version}</bundle>
+    </feature>
+
+    <feature name="protobuf" description="Protocol Buffer Java API "  version="${google.protobuf.version}"  resolver="(obr)">
+        <details>Protocol Buffers are a way of encoding structured data in an efficient yet extensible format.</details>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.protobuf-java/${google.protobuf.bundle.version}</bundle>
     </feature>
 
     <feature name="zxing" description="ZXing: Core barcode encoding/decoding library"  version="${google.zxing.version}"  resolver="(obr)">

@@ -65,6 +65,11 @@
 
         <!-- Graph -->
         <!-- Other(Allegro, Neo4J, OrientDB, Virtuoso, Stardog) -->
+        <dependency>
+            <groupId>com.orientechnologies</groupId>
+            <artifactId>orientdb-core</artifactId>
+            <version>1.7.7</version>
+        </dependency>
 
         <!-- Key-value Store -->
         <!-- Other(Dynamo, FoundationDB, MemcacheDB, Redis, Riak, FairCom c-treeACE) -->

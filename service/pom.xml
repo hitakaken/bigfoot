@@ -8,6 +8,7 @@
         <groupId>bigfoot.framework</groupId>
         <artifactId>bigfoot</artifactId>
         <version>0.1.1.Alpha</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <groupId>bigfoot.framework.service</groupId>

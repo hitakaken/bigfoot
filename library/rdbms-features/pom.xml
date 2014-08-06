@@ -41,7 +41,7 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- RDBMS -->
+        <!-- RDBMS Drivers-->
         <!-- Apache Derby JDBC driver -->
         <dependency>
             <groupId>org.apache.derby</groupId>
@@ -215,6 +215,10 @@
         </dependency>
         <!-- Teradata JDBC driver -->
         <!-- Can't Found -->
+
+        <!-- RDBMS ORM -->
+        <!-- Hibernate -->
+
     </dependencies>
     <build>
         <plugins>

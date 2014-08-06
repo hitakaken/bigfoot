@@ -9,6 +9,8 @@
       <module fileurl="file://$PROJECT_DIR$/library/core-features/core-features.iml" filepath="$PROJECT_DIR$/library/core-features/core-features.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/data-features/data-features.iml" filepath="$PROJECT_DIR$/library/data-features/data-features.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/google-features/google-features.iml" filepath="$PROJECT_DIR$/library/google-features/google-features.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/jackson-features/jackson-features.iml" filepath="$PROJECT_DIR$/library/jackson-features/jackson-features.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kernel/kernel.iml" filepath="$PROJECT_DIR$/kernel/kernel.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/network-features/network-features.iml" filepath="$PROJECT_DIR$/library/network-features/network-features.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/nosql-features/nosql-features.iml" filepath="$PROJECT_DIR$/library/nosql-features/nosql-features.iml" />

@@ -70,23 +70,45 @@
         <dependency>
             <groupId>javax.transaction</groupId>
             <artifactId>javax.transaction-api</artifactId>
-            <version>${javax.transaction-api.version}</version>
+            <version>${javax.transaction.version}</version>
             <scope>provided</scope>
         </dependency>
 
-        <!--  JSR-303 Bean Validation Spec API -->
+        <!-- JSR-303 Bean Validation Spec API -->
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
             <version>${javax.validation.version}</version>
             <scope>provided</scope>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>${javax.validation.bundle.groudId}</groupId>-->
-            <!--<artifactId>${javax.validation.bundle.artifactId}</artifactId>-->
-            <!--<version>${javax.validation.bundle.version}</version>-->
-            <!--<scope>provided</scope>-->
-        <!--</dependency>-->
+
+        <!-- JSR-311 (JAX RS) Java API for RESTful Web Services Spec API -->
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-jaxrs_1.1_spec</artifactId>
+            <version>${jaxrs.bundle.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>jsr311-api</artifactId>
+            <version>${jsr311-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <version>${javax.ws.rs-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- JSR 353 (JSON Processing) API -->
+        <dependency>
+            <groupId>javax.json</groupId>
+            <artifactId>javax.json-api</artifactId>
+            <version>${javax.json.version}</version>
+            <scope>provided</scope>
+        </dependency>
 
         <!--<dependency>
             <groupId>org.apache.geronimo.specs</groupId>

@@ -25,6 +25,22 @@
             <artifactId>org.apache.karaf.features.core</artifactId>
             <scope>provided</scope>
         </dependency>
+        <!-- Bigfoot deps -->
+        <dependency>
+            <groupId>bigfoot.framework.library</groupId>
+            <artifactId>specs-features</artifactId>
+            <classifier>features</classifier>
+            <type>xml</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>bigfoot.framework.library</groupId>
+            <artifactId>apache-commons-features</artifactId>
+            <classifier>features</classifier>
+            <type>xml</type>
+            <scope>provided</scope>
+        </dependency>
+
         <!-- Object Mapper-->
         <!-- Ezmorph -->
         <dependency>
@@ -34,8 +50,21 @@
             <scope>provided</scope>
         </dependency>
         <!-- Joda -->
+        <dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.joda-time</artifactId>
+            <version>${joda-time.bundle.version}</version>
+            <scope>provided</scope>
+        </dependency>
 
         <!-- Json -->
+        <!-- Alibaba Fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+            <scope>provided</scope>
+        </dependency>
         <!-- Json.org -->
         <dependency>
             <groupId>org.apache.servicemix.bundles</groupId>
@@ -49,14 +78,62 @@
             <artifactId>org.apache.servicemix.bundles.json-lib</artifactId>
             <version>${json-lib.bundle.version}</version>
             <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>net.sf.ezmorph</groupId>
+                    <artifactId>ezmorph</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency><!-- from apache-commons-features -->
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>${apache.commons.beanutils.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency><!-- from apache-commons-features -->
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>${apache.commons.collections.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency><!-- from apache-commons-features -->
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>${apache.commons.logging.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency><!-- from apache-commons-features -->
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>${apache.commons.lang.version}</version>
+            <scope>provided</scope>
         </dependency>
         <!-- Gson already in google-features -->
 
         <!-- XML -->
+        <dependency>
+            <groupId>org.apache.xerces</groupId>
+            <artifactId>xercesImpl</artifactId>
+            <version>${apache.xerces.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.xstream</artifactId>
+            <version>${xstream.bundle.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.xmlresolver</artifactId>
+            <version>${xmlresolver.bundle.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.xerces</artifactId>
+            <version>${xerces.bundle.version}</version>
+        </dependency>
 
         <!-- YAML -->
-
-        <!-- Jackson Framework -->
 
     </dependencies>
     <build>

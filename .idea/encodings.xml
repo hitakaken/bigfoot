@@ -4,11 +4,13 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/application" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/assemblies" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kernel" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library/apache-commons-features" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library/core-features" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library/data-features" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library/google-features" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/library/jackson-features" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library/network-features" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library/nosql-features" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library/rdbms-features" charset="UTF-8" />

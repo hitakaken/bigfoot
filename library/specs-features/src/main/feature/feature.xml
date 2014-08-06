@@ -42,13 +42,27 @@
         <bundle>mvn:javax.resource/javax.resource-api/${javax.resource-api.version}</bundle>
     </feature>
 
-    <feature name="javax-transaction-api" description="Java EE Connector Architecture API" version="${javax.transaction-api.version}"  resolver="(obr)">
-        <bundle>mvn:javax.transaction/javax.transaction-api/${javax.transaction-api.version}</bundle>
+    <feature name="javax-transaction" description="Java EE Connector Architecture API" version="${javax.transaction.version}"  resolver="(obr)">
+        <bundle>mvn:javax.transaction/javax.transaction-api/${javax.transaction.version}</bundle>
     </feature>
 
     <feature name="javax-validation" description="JSR-303 Bean Validation Spec API" version="${javax.validation.version}"  resolver="(obr)">
         <bundle>mvn:javax.validation/validation-api/${javax.validation.version}</bundle>
     </feature>
 
+    <feature name="jaxrs" description="JSR-311 (JAX RS) Java API for RESTful Web Services Spec API" version="${jaxrs.version}"  resolver="(obr)">
+        <bundle>mvn:org.apache.geronimo.specs/geronimo-jaxrs_1.1_spec/${jaxrs.bundle.version}</bundle>
+    </feature>
+    <feature name="jaxrs" description="JSR-311 (JAX RS) Java API for RESTful Web Services Spec API" version="${jsr311-api.version}"  resolver="(obr)">
+        <bundle>mvn:javax.ws.rs/jsr311-api/${jsr311-api.version}</bundle>
+    </feature>
+    <feature name="jaxrs" description="JSR-311 (JAX RS) Java API for RESTful Web Services Spec API" version="${javax.ws.rs-api.version}"  resolver="(obr)">
+        <bundle>mvn:javax.ws.rs/javax.ws.rs-api/${javax.ws.rs-api.version}</bundle>
+    </feature>
+
+    <feature name="javax-json" description="JSR 353 (JSON Processing) API" version="${javax.json.version}"  resolver="(obr)">
+        <details>API module of JSR 353:Java API for Processing JSON</details>
+        <bundle>mvn:javax.json/javax.json-api/${javax.json.version}</bundle>
+    </feature>
 
 </features>

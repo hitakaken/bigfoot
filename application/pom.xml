@@ -8,6 +8,7 @@
         <groupId>bigfoot.framework</groupId>
         <artifactId>bigfoot</artifactId>
         <version>0.1.1.Alpha</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <groupId>bigfoot.framework.application</groupId>
@@ -15,7 +16,9 @@
     <packaging>pom</packaging>
 
     <name>Bigfoot Framework :: Application</name>
-    <description>Bigfoot Framework 应用组件集合</description>
+    <description>Bigfoot Framework 应用集合</description>
 
-    
+    <modules>
+
+    </modules>
 </project>

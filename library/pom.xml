@@ -39,6 +39,8 @@
         <module>apache-commons-features</module>
         <!-- Google Open Source Utilities-->
         <module>google-features</module>
+        <!-- Jackson JSON Processor -->
+        <module>jackson-features</module>
         <!-- Spring Projects -->
         <module>spring-features</module>
     </modules>

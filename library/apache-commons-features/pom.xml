@@ -257,6 +257,7 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-jci-eclipse</artifactId>
             <version>${apache.commons.jci.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jdt.core.compiler</groupId>

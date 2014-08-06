@@ -25,10 +25,17 @@
         <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.ezmorph/${ezmorph.bundle.version}</bundle>
     </feature>
 
+    <feature name="joda-time" description="Date and time library to replace JDK date handling" version="${joda-time.version}" resolver="(obr)">
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.joda-time/${joda-time.bundle.version}</bundle>
+    </feature>
+
+    <feature name="fastjson" description="Fastjson" version="${fastjson.version}" resolver="(obr)">
+        <details>Fastjson is a JSON processor (JSON parser + JSON generator) written in Java</details>
+        <bundle>wrap:mvn:com.alibaba/fastjson/${fastjson.version}</bundle>
+    </feature>
+
     <feature name="json" description="JSON In Java" version="${json.version}" resolver="(obr)">
-        <details>
-            JSON is a light-weight, language independent, data interchange format. See http://www.JSON.org/ The files in this package implement JSON encoders/decoders in Java. It also includes the capability to convert between JSON and XML, HTTP headers, Cookies, and CDL. This is a reference implementation. There is a large number of JSON packages in Java. Perhaps someday the Java community will standardize on one. Until then, choose carefully. The license includes this restriction: "The software shall be used for good, not evil." If your conscience cannot live with that, then choose a different package. The package compiles on Java 1.2 thru Java 1.4.
-        </details>
+        <details>JSON is a light-weight, language independent, data interchange format. See http://www.JSON.org/ The files in this package implement JSON encoders/decoders in Java. It also includes the capability to convert between JSON and XML, HTTP headers, Cookies, and CDL. This is a reference implementation. There is a large number of JSON packages in Java. Perhaps someday the Java community will standardize on one. Until then, choose carefully. The license includes this restriction: "The software shall be used for good, not evil." If your conscience cannot live with that, then choose a different package. The package compiles on Java 1.2 thru Java 1.4.</details>
         <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.json/${json.bundle.version}</bundle>
     </feature>
 

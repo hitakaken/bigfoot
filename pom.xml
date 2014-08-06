@@ -29,6 +29,7 @@
     <inceptionYear>2014</inceptionYear>
 
     <modules>
+        <module>kernel</module>
         <module>library</module>
         <module>service</module>
         <module>application</module>
@@ -86,8 +87,13 @@
         <javax.inject.bundle.version>1_2</javax.inject.bundle.version>
         <javax.resource.version>1.5</javax.resource.version>
         <javax.resource-api.version>1.7</javax.resource-api.version>
-        <javax.transaction-api.version>1.2</javax.transaction-api.version>
+        <javax.transaction.version>1.2</javax.transaction.version>
         <javax.validation.version>1.1.0.Final</javax.validation.version>
+        <jaxrs.version>1.1</jaxrs.version>
+        <jaxrs.bundle.version>1.0</jaxrs.bundle.version>
+        <jsr311-api.version>1.1.1</jsr311-api.version>
+        <javax.ws.rs-api.version>2.0</javax.ws.rs-api.version>
+        <javax.json.version>1.0</javax.json.version>
         <!--<javax.validation.version>1.0.0.GA</javax.validation.version>
         <javax.validation.bundle.groudId>org.apache.geronimo.specs</javax.validation.bundle.groudId>
         <javax.validation.bundle.artifactId>geronimo-validation_1.0_spec</javax.validation.bundle.artifactId>
@@ -96,10 +102,24 @@
         <!-- Data Format(XML, Json, etc) Utilities-->
         <ezmorph.version>1.0.6</ezmorph.version>
         <ezmorph.bundle.version>1.0.6_1</ezmorph.bundle.version>
+        <joda-time.version>2.3</joda-time.version>
+        <joda-time.bundle.version>2.3_1</joda-time.bundle.version><!-- wait for 2.4 -->
+        <fastjson.version>1.1.41</fastjson.version>
         <json.version>20140107</json.version>
         <json.bundle.version>20140107_1</json.bundle.version>
         <json-lib.version>2.4</json-lib.version>
         <json-lib.bundle.version>2.4_1</json-lib.bundle.version>
+        <apache.xerces.version>2.11.0</apache.xerces.version>
+        <xerces.bundle.version>2.11.0_1</xerces.bundle.version>
+        <xstream.bundle.version>1.4.6_1</xstream.bundle.version>
+        <xmlresolver.bundle.version>1.2_5</xmlresolver.bundle.version>
+        <jackson.version>1.9.13</jackson.version>
+        <jackson2.version>2.4.1</jackson2.version>
+        <jackson2.core.version>2.4.1.1</jackson2.core.version>
+        <jackson2.databind.version>2.4.1.3</jackson2.databind.version>
+        <jackson2.annotations.version>2.4.1</jackson2.annotations.version>
+        <hppc.version>0.6.0</hppc.version>
+        <jackson2.dataformat.smile.version>2.4.1.1</jackson2.dataformat.smile.version>
         <!-- Network Communication Utilities -->
         <apache.httpcomonents.version>4.3.2</apache.httpcomonents.version>
         <!-- NoSql Database Driver-->
@@ -122,6 +142,9 @@
         <postgresql.version>9.3-1102-jdbc41</postgresql.version>
         <postgresql.bundle.version>9.3-1100-jdbc41_1</postgresql.bundle.version>
         <sqlite.version>3.7.2</sqlite.version><!-- Wait for 3.8.x to Support JDBC 4.0-->
+        <!-- RDBMS ORM -->
+        <hibernate4.version>4.3.6.Final</hibernate4.version>
+        <hibernate3.version>3.6.10.Final</hibernate3.version>
 
         <restlet.version>2.1.2</restlet.version>
         <!-- Apache Commons -->
@@ -179,7 +202,7 @@
         <google.guice.version>3.0</google.guice.version>
         <google.guice.bundle.version>3.0_1</google.guice.bundle.version>
         <google.gson.version>2.2.4</google.gson.version>
-        <google.gwt.version>2.6.1</google.gwt.version>
+        <google.gwt.version>2.6.0</google.gwt.version>
         <google.gwt.bundle.version>2.6.0_1</google.gwt.bundle.version><!-- wait for 2.6.1 -->
         <google.protobuf.version>2.4.1</google.protobuf.version>
         <google.protobuf.bundle.version>2.4.1_1</google.protobuf.bundle.version><!-- wait for 2.5.0 -->

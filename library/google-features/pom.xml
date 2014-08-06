@@ -101,18 +101,30 @@
 
         <!-- Google GWT -->
         <dependency>
-            <groupId>com.google.gwt</groupId>
-            <artifactId>gwt-dev</artifactId>
-            <version>${google.gwt.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.gwt</groupId>
-            <artifactId>gwt-servlet</artifactId>
-            <version>${google.gwt.version}</version>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.gwt-user</artifactId>
+            <version>${google.gwt.bundle.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.json</groupId>
+                    <artifactId>json</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.apache.servicemix.bundles</groupId>
-            <artifactId>org.apache.servicemix.bundles.gwt-user</artifactId>
+            <artifactId>org.apache.servicemix.bundles.gwt-dev</artifactId>
+            <version>${google.gwt.bundle.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.json</groupId>
+                    <artifactId>json</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.gwt-servlet</artifactId>
             <version>${google.gwt.bundle.version}</version>
         </dependency>
         <dependency>
@@ -134,23 +146,8 @@
             <classifier>sources</classifier>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>org.apache.servicemix.bundles</groupId>
-            <artifactId>org.apache.servicemix.bundles.gwt-dev</artifactId>
-            <version>${google.gwt.bundle.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.servicemix.bundles</groupId>
-            <artifactId>org.apache.servicemix.bundles.gwt-servlet</artifactId>
-            <version>${google.gwt.bundle.version}</version>
-        </dependency>
 
         <!-- Google Protocol Buffer -->
-        <dependency>
-            <groupId>com.google.protobuf</groupId>
-            <artifactId>protobuf-java</artifactId>
-            <version>${google.protobuf.version}</version>
-        </dependency>
         <dependency>
             <groupId>org.apache.servicemix.bundles</groupId>
             <artifactId>org.apache.servicemix.bundles.protobuf-java</artifactId>
