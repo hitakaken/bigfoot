@@ -18,6 +18,24 @@
         <processorPath useClasspath="true" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="apache-commons-features" target="1.7" />
+      <module name="application" target="1.7" />
+      <module name="assemblies" target="1.7" />
+      <module name="bigfoot" target="1.7" />
+      <module name="core-features" target="1.7" />
+      <module name="data-features" target="1.7" />
+      <module name="google-features" target="1.7" />
+      <module name="jackson-features" target="1.7" />
+      <module name="kernel" target="1.7" />
+      <module name="library" target="1.7" />
+      <module name="network-features" target="1.7" />
+      <module name="nosql-features" target="1.7" />
+      <module name="rdbms-features" target="1.7" />
+      <module name="service" target="1.7" />
+      <module name="specs-features" target="1.7" />
+      <module name="spring-features" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
 

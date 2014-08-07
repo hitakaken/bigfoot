@@ -136,6 +136,15 @@
         <bundle>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2.version}</bundle>
     </feature>
 
+    <feature name="jackson-module-scala" description="Jackson Module Scala" version="${jackson2.version}" resolver="(obr)">
+        <feature version="${jackson2.version}">jackson-databind</feature>
+        <feature>scala</feature>
+        <feature>guava</feature>
+        <feature>paranamer</feature>
+        <feature>jsr305</feature>
+        <bundle>mvn:com.fasterxml.jackson.module/jackson-module-jsonSchema/${jackson2.version}</bundle>
+    </feature>
+
     <feature name="jackson-module-jsonSchema" description="Jackson Module JsonSchema" version="${jackson2.version}" resolver="(obr)">
         <details>Add-on module for Jackson (http://jackson.codehaus.org) to support JSON Schema (http://tools.ietf.org/html/draft-zyp-json-schema-03) version 3 generation.</details>
         <feature version="${jackson2.version}">jackson-databind</feature>
@@ -146,6 +155,26 @@
         <details>Jackson (https://github.com/FasterXML/jackson) extension module used to enhance access functionality using bytecode generation.</details>
         <feature version="${jackson2.version}">jackson-databind</feature>
         <bundle>mvn:com.fasterxml.jackson.module/jackson-module-afterburner/${jackson2.version}</bundle>
+    </feature>
+
+    <feature name="jackson-module-guice" description="Jackson Module Guice" version="${jackson2.version}" resolver="(obr)">
+        <details>Stuff to make integration with Guice a bit easier</details>
+        <feature version="${jackson2.version}">jackson-databind</feature>
+        <feature>guice</feature>
+        <bundle>mvn:com.fasterxml.jackson.module/jackson-module-guice/${jackson2.version}</bundle>
+    </feature>
+
+    <feature name="jackson-module-parameter-names" description="Jackson Module Parameter Names" version="${jackson2.version}" resolver="(obr)">
+        <details>Add-on module for Jackson (http://jackson.codehaus.org) to support introspection of method/constructor parameter names, without having to add explicit property name annotation.</details>
+        <feature version="${jackson2.version}">jackson-databind</feature>
+        <bundle>mvn:com.fasterxml.jackson.module/jackson-module-parameter-names/${jackson2.version}</bundle>
+    </feature>
+
+    <feature name="jackson-module-paranamer" description="Jackson Module Paranamer" version="${jackson2.version}" resolver="(obr)">
+        <details>AnnotationIntrospectors that use Paranamer (http://paranamer.codehaus.org) to introspect names of constructor (and factory method) parameters.</details>
+        <feature version="${jackson2.version}">jackson-databind</feature>
+        <feature>paranamer</feature>
+        <bundle>mvn:com.fasterxml.jackson.module/jackson-module-paranamer/${jackson2.version}</bundle>
     </feature>
 
     <feature name="jackson-dataformat-smile" description="Jackson Dataformat Smile" version="${jackson2.version}" resolver="(obr)">

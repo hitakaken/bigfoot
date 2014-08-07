@@ -75,6 +75,13 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- Thoughtworks ParaNamer -->
+        <dependency>
+            <groupId>com.thoughtworks.paranamer</groupId>
+            <artifactId>paranamer</artifactId>
+            <version>${thoughtworks.paranmaer.version}</version>
+        </dependency>
+
         <!-- Eclipse JDT  Core Batch Compiler-->
         <dependency>
             <groupId>org.eclipse.jdt.core.compiler</groupId>
@@ -116,6 +123,80 @@
             <groupId>org.mozilla</groupId>
             <artifactId>rhino</artifactId>
             <version>${mozilla.rhino.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Scala -->
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>${scala.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-reflect</artifactId>
+            <version>${scala.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-compiler</artifactId>
+            <version>${scala.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency> <!-- for scala-compiler-doc -->
+            <groupId>org.scala-lang.modules</groupId>
+            <artifactId>scala-xml_2.11</artifactId>
+            <version>${scala.xml_2.11.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency> <!-- for scala-compiler-doc -->
+            <groupId>org.scala-lang.modules</groupId>
+            <artifactId>scala-parser-combinators_2.11</artifactId>
+            <version>${scala.parser-combinators_2.11.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency> <!-- for scala-compiler-repl; once it moves there, make it required -->
+            <groupId>jline</groupId>
+            <artifactId>jline</artifactId>
+            <version>${jline.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-actors</artifactId>
+            <version>${scala.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-lang.plugins</groupId>
+            <artifactId>scala-continuations-library_2.11</artifactId>
+            <version>${scala.continuations-library_2.11.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-lang.modules</groupId>
+            <artifactId>scala-swing_2.11</artifactId>
+            <version>${scala.swing_2.11.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-actor_2.11</artifactId>
+            <version>${typesafe.akka-actor_2.11.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.typesafe</groupId>
+            <artifactId>config</artifactId>
+            <version>${typesafe.config.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-actors-migration_2.11</artifactId>
+            <version>${scala.actors-migration_2.11.version}</version>
             <scope>provided</scope>
         </dependency>
 

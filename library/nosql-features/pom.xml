@@ -130,7 +130,11 @@
         OpenQM
         Revelation Software's OpenInsight
         Rocket U2 -->
-
+        <dependency>
+            <groupId>com.thinkaurelius.titan</groupId>
+            <artifactId>titan-core</artifactId>
+            <version>0.4.4</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

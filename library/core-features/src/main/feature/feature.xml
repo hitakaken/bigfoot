@@ -70,6 +70,11 @@
         <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.concurrent/${concurrent.bundle.version}</bundle>
     </feature>
 
+    <feature name="paranamer" description="ParaNamer Core" version="${paranamer.version}"  resolver="(obr)">
+        <bundle>mvn:com.thoughtworks.paranamer/paranamer/${thoughtworks.paranamer.version}</bundle>
+    </feature>
+
+
     <feature name="ecj" description="Eclipse ECJ: Eclipse JDT Core Batch Compiler" version="${eclipse.ecj.version}"  resolver="(obr)">
         <bundle>mvn:org.eclipse.jdt.core.compiler/ecj/${eclipse.ecj.version}</bundle>
     </feature>
@@ -92,6 +97,21 @@
             Rhino is an open-source implementation of JavaScript written entirely in Java. It is typically embedded into Java applications to provide scripting to end users.
         </details>
         <bundle>wrap:mvn:org.mozilla/rhino/${rhino.version}</bundle>
+    </feature>
+
+    <feature name="scala" description="" version="${scala.version}" resolver="(obr)">
+        <bundle>mvn:org.scala-lang/scala-library/${scala.version}</bundle>
+        <bundle>mvn:org.scala-lang/scala-reflect/${scala.version}</bundle>
+        <bundle>mvn:org.scala-lang/scala-compiler/${scala.version}</bundle>
+        <bundle>mvn:org.scala-lang.modules/scala-xml_2.11/${scala.xml_2.11.version}</bundle>
+        <bundle>mvn:org.scala-lang.modules/scala-parser-combinators_2.11/${scala.parser-combinators_2.11.version}</bundle>
+        <bundle>mvn:jline/jline/${jline.version}</bundle>
+        <bundle>mvn:org.scala-lang/scala-actors/${scala.version}</bundle>
+        <bundle>mvn:org.scala-lang.plugins/scala-continuations-library_2.11/${scala.continuations-library_2.11.version}</bundle>
+        <bundle>mvn:org.scala-lang.modules/scala-swing_2.11/${scala.swing_2.11.version}</bundle>
+        <bundle>mvn:com.typesafe.akka/akka-actor_2.11/${typesafe.akka-actor_2.11.version}</bundle>
+        <bundle>mvn:com.typesafe/config/${typesafe.config.version}</bundle>
+        <bundle>mvn:org.scala-lang/scala-actors-migration_2.11/${scala.actors-migration_2.11.version}</bundle>
     </feature>
 
     <feature name="antlr-runtime" description="ANTLR 3 Runtime" version="${antlr.version}"  resolver="(obr)">

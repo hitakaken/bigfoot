@@ -198,4 +198,9 @@
     <feature name="jsr303-api-1.1.0" description="Apache ServiceMix :: Specs :: JSR 303 API 1.1.0" version="${servicemix.specs.version}" resolver="(obr)">
         <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jsr303-api-1.1.0/${servicemix.specs.version}</bundle>
     </feature>
+
+    <feature name="jsr305" description="FindBugs Jsr305" version="${jsr305.version}" resolver="(obr)">
+        <details>JSR305 Annotations for Findbugs</details>
+        <bundle>mvn:org.apache.servicemix.bundels/org.apache.servicemix.bundels.jsr305/${jsr305.bundle.version}</bundle>
+    </feature>
 </features>

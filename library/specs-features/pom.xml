@@ -398,6 +398,13 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- JSR305 Annotations for Findbugs -->
+        <dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.jsr305</artifactId>
+            <version>${jsr305.bundle.version}</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
