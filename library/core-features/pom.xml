@@ -46,9 +46,22 @@
         <!-- ASM -->
         <dependency>
             <groupId>org.ow2.asm</groupId>
+            <artifactId>asm-all</artifactId>
+            <version>${asm.version}</version>
+            <scope>provided</scope>
+        </dependency>
+       <!-- <dependency>
+            <groupId>org.ow2.asm</groupId>
             <artifactId>asm</artifactId>
             <version>${asm.version}</version>
             <scope>provided</scope>
+        </dependency>-->
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm-all</artifactId>
+            <version>${asm5.version}</version>
+            <scope>provided</scope>
+            <optional>true</optional>
         </dependency>
 
         <!-- Aspectj -->
@@ -79,7 +92,8 @@
         <dependency>
             <groupId>com.thoughtworks.paranamer</groupId>
             <artifactId>paranamer</artifactId>
-            <version>${thoughtworks.paranmaer.version}</version>
+            <version>${thoughtworks.paranamer.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- Eclipse JDT  Core Batch Compiler-->

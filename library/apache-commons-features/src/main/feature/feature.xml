@@ -108,6 +108,9 @@
         </details>
         <bundle>mvn:org.apache.commons/commons-compress/${apache.commons.compress.version}</bundle>
     </feature>
+    <feature name="xz" description="XZ data compression" version="${xz.version}" resolver="(obr)">
+        <bundle>mvn:org.tukaani/xz/${xz.version}</bundle>
+    </feature>
 
     <feature name="commons-configuration"
              description="Reading of configuration/preferences files in various formats."

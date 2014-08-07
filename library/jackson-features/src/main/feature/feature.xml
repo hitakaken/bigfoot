@@ -27,87 +27,87 @@
     </feature>
     <feature name="jackson-mapper-asl" description="Data Mapper For Jackson" version="${jackson.version}" resolver="(obr)">
         <details>Data Mapper package is a high-performance data binding package built on Jackson JSON processor</details>
-        <feature version="${jackson.version}">jackson-core-asl</feature>
+        <feature>jackson-core-asl</feature>
         <bundle>mvn:org.codehaus.jackson/jackson-mapper-asl/${jackson.version}</bundle>
     </feature>
     <feature name="jackson-jaxrs" description="JAX RS Provider For JSON Content Type" version="${jackson.version}" resolver="(obr)">
         <details>Jax-RS provider for JSON content type, based on Jackson JSON processor's data binding functionality.</details>
-        <feature version="${jackson.version}">jackson-mapper-asl</feature>
+        <feature>jackson-mapper-asl</feature>
         <bundle>mvn:org.codehaus.jackson/jackson-jaxrs/${jackson.version}</bundle>
     </feature>
     <feature name="jackson-xc" description="Xml Compatibility Extensions For Jackson" version="${jackson.version}" resolver="(obr)">
         <details>Extensions that provide interoperability support for Jackson JSON processor's data binding functionality.</details>
-        <feature version="${jackson.version}">jackson-mapper-asl</feature>
+        <feature>jackson-mapper-asl</feature>
         <bundle>mvn:org.codehaus.jackson/jackson-xc/${jackson.version}</bundle>
     </feature>
     <feature name="jackson-smile" description="Support For Smile Data Format (binary Infoset For JSON)" version="${jackson.version}" resolver="(obr)">
         <details>Support for efficient binary data format that can be access same as textual JSON ("binary infoset for JSON"), using standard Jackson abstractions: specifically, extension of JsonFactory and implementations of JsonParser and JsonGenerator.</details>
-        <feature version="${jackson.version}">jackson-mapper-asl</feature>
+        <feature>jackson-mapper-asl</feature>
         <bundle>mvn:org.codehaus.jackson/jackson-smile/${jackson.version}</bundle>
     </feature>
     <feature name="jackson-mrbean" description="Bean Materializer" version="${jackson.version}" resolver="(obr)">
         <details>Functionality for implementing interfaces and abstract types dynamically ("bean materialization")</details>
-        <feature version="${jackson.version}">jackson-mapper-asl</feature>
+        <feature>jackson-mapper-asl</feature>
         <bundle>mvn:org.codehaus.jackson/jackson-mrbean/${jackson.version}</bundle>
     </feature>
 
-    <feature name="jackson-core" description="Jackson Core" version="${jackson2.version}" resolver="(obr)">
+    <feature name="jackson-core" description="Jackson Core" version="${jackson2.core.version}" resolver="(obr)">
         <details>Core Jackson abstractions, basic JSON streaming API implementation</details>
         <bundle>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.core.version}</bundle>
     </feature>
-    <feature name="jackson-annotations" description="Jackson Annotations" version="${jackson2.version}" resolver="(obr)">
+    <feature name="jackson-annotations" description="Jackson Annotations" version="${jackson2.annotations.version}" resolver="(obr)">
         <details>Core annotations used for value types, used by Jackson data binding package.</details>
         <bundle>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.annotations.version}</bundle>
     </feature>
-    <feature name="jackson-databind" description="Jackson Databind" version="${jackson2.version}" resolver="(obr)">
+    <feature name="jackson-databind" description="Jackson Databind" version="${jackson2.databind.version}" resolver="(obr)">
         <details>General data-binding functionality for Jackson: works on core streaming API</details>
-        <feature version="${jackson2.version}">jackson-core</feature>
-        <feature version="${jackson2.version}">jackson-annotations</feature>
+        <feature>jackson-core</feature>
+        <feature>jackson-annotations</feature>
         <bundle>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.databind.version}</bundle>
     </feature>
 
     <feature name="jackson-datatype-joda" description="Jackson Datatype Joda" version="${jackson2.version}" resolver="(obr)">
         <details>Add-on module for Jackson (http://jackson.codehaus.org) to support Joda (http://joda-time.sourceforge.net/) data types.</details>
-        <feature version="${jackson2.version}">jackson-databind</feature>
+        <feature>jackson-databind</feature>
         <feature>joda-time</feature>
         <bundle>mvn:com.fasterxml.jackson.datatype/jackson-datatype-joda/${jackson2.version}</bundle>
     </feature>
 
     <feature name="jackson-datatype-guava" description="Jackson Datatype Guava" version="${jackson2.version}" resolver="(obr)">
         <details>Add-on datatype-support module for Jackson (http://jackson.codehaus.org) that handles Guava (http://code.google.com/p/guava-libraries/) types (currently mostly just collection ones)</details>
-        <feature version="${jackson2.version}">jackson-databind</feature>
+        <feature>jackson-databind</feature>
         <feature>guava</feature>
         <bundle>mvn:com.fasterxml.jackson.datatype/jackson-datatype-guava/${jackson2.version}</bundle>
     </feature>
 
     <feature name="jackson-datatype-json-org" description="Jackson Datatype Json.org" version="${jackson2.version}" resolver="(obr)">
         <details>Support for datatypes of "org.json" JSON library (see http://json.org/java), mainly to make it easier to upgrade code to Jackson, using automated conversions.</details>
-        <feature version="${jackson2.version}">jackson-databind</feature>
+        <feature>jackson-databind</feature>
         <feature>json</feature>
         <bundle>mvn:com.fasterxml.jackson.datatype/jackson-datatype-json-org/${jackson2.version}</bundle>
     </feature>
 
     <feature name="jackson-datatype-jsr310" description="Jackson Datatype JSR310" version="${jackson2.version}" resolver="(obr)">
         <details>Add-on module to support JSR-310 (Java 8 Date &amp; Time API) data types.</details>
-        <feature version="${jackson2.version}">jackson-databind</feature>
+        <feature>jackson-databind</feature>
         <bundle>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2.version}</bundle>
     </feature>
 
     <feature name="jackson-datatype-hibernate4" description="Jackson Datatype Hibernate4" version="${jackson2.version}" resolver="(obr)">
         <details>Add-on module for Jackson (http://jackson.codehaus.org) to support Hibernate (http://hibernate.org) version 4.x data types.</details>
-        <feature version="${jackson2.version}">jackson-databind</feature>
+        <feature>jackson-databind</feature>
         <bundle>mvn:com.fasterxml.jackson.datatype/jackson-datatype-hibernate4/${jackson2.version}</bundle>
     </feature>
 
     <feature name="jackson-datatype-hibernate3" description="Jackson Datatype Hibernate3" version="${jackson2.version}" resolver="(obr)">
         <details>Add-on module for Jackson (http://jackson.codehaus.org) to support Hibernate (http://hibernate.org) version 3.x data types.</details>
-        <feature version="${jackson2.version}">jackson-databind</feature>
+        <feature>jackson-databind</feature>
         <bundle>mvn:com.fasterxml.jackson.datatype/jackson-datatype-hibernate3/${jackson2.version}</bundle>
     </feature>
 
     <feature name="jackson-datatype-hppc" description="Jackson Datatype HPPC" version="${jackson2.version}" resolver="(obr)">
         <details>Add-on module for Jackson (http://jackson.codehaus.org) to support High-Performance Primitive Collections (HPPC, see http://labs.carrotsearch.com/hppc.html) data types.</details>
-        <feature version="${jackson2.version}">jackson-databind</feature>
+        <feature>jackson-databind</feature>
         <feature>hppc</feature>
         <bundle>mvn:com.fasterxml.jackson.datatype/jackson-datatype-hppc/${jackson2.version}</bundle>
     </feature>
@@ -118,26 +118,26 @@
 
     <feature name="jackson-datatype-jsr353" description="Jackson Datatype JSR 353" version="${jackson2.version}" resolver="(obr)">
         <details>Add-on module for Jackson (http://jackson.codehaus.org) to support working with JSR-353 (JDK Json-processing API) node typesm via data-binding</details>
-        <feature version="${jackson2.version}">jackson-databind</feature>
+        <feature>jackson-databind</feature>
         <feature>javax-json</feature>
         <bundle>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr353/${jackson2.version}</bundle>
     </feature>
 
     <feature name="jackson-datatype-jdk7" description="Jackson Datatype Jdk7" version="${jackson2.version}" resolver="(obr)">
         <details>Add-on module for Jackson (http://jackson.codehaus.org) to support JDK 7 data types.</details>
-        <feature version="${jackson2.version}">jackson-databind</feature>
+        <feature>jackson-databind</feature>
         <bundle>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jdk7/${jackson2.version}</bundle>
     </feature>
 
     <feature name="jackson-module-jaxb-annotations" description="Jackson Module JAXB Annotations" version="${jackson2.version}" resolver="(obr)">
         <details>Support for using JAXB annotations as an alternative to "native" Jackson annotations, for configuring data binding.</details>
-        <feature version="${jackson2.version}">jackson-databind</feature>
+        <feature>jackson-databind</feature>
         <feature>jaxb-api-2.2</feature>
         <bundle>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2.version}</bundle>
     </feature>
 
     <feature name="jackson-module-scala" description="Jackson Module Scala" version="${jackson2.version}" resolver="(obr)">
-        <feature version="${jackson2.version}">jackson-databind</feature>
+        <feature>jackson-databind</feature>
         <feature>scala</feature>
         <feature>guava</feature>
         <feature>paranamer</feature>
@@ -147,46 +147,124 @@
 
     <feature name="jackson-module-jsonSchema" description="Jackson Module JsonSchema" version="${jackson2.version}" resolver="(obr)">
         <details>Add-on module for Jackson (http://jackson.codehaus.org) to support JSON Schema (http://tools.ietf.org/html/draft-zyp-json-schema-03) version 3 generation.</details>
-        <feature version="${jackson2.version}">jackson-databind</feature>
+        <feature>jackson-databind</feature>
         <bundle>mvn:com.fasterxml.jackson.module/jackson-module-jsonSchema/${jackson2.version}</bundle>
     </feature>
 
     <feature name="jackson-module-afterburner" description="Jackson Module Afterburner" version="${jackson2.version}" resolver="(obr)">
         <details>Jackson (https://github.com/FasterXML/jackson) extension module used to enhance access functionality using bytecode generation.</details>
-        <feature version="${jackson2.version}">jackson-databind</feature>
+        <feature>jackson-databind</feature>
         <bundle>mvn:com.fasterxml.jackson.module/jackson-module-afterburner/${jackson2.version}</bundle>
+    </feature>
+
+    <feature name="jackson-module-mrbean" description="Jackson Module Mr.Bean" version="${jackson2.version}" resolver="(obr)">
+        <details>Functionality for implementing interfaces and abstract types dynamically ("bean materialization"), integrated with Jackson (although usable externally as well)</details>
+        <feature>jackson-databind</feature>
+        <feature>asm5</feature>
+        <bundle>mvn:com.fasterxml.jackson.module/jackson-module-mrbean/${jackson2.version}</bundle>
     </feature>
 
     <feature name="jackson-module-guice" description="Jackson Module Guice" version="${jackson2.version}" resolver="(obr)">
         <details>Stuff to make integration with Guice a bit easier</details>
-        <feature version="${jackson2.version}">jackson-databind</feature>
+        <feature>jackson-databind</feature>
         <feature>guice</feature>
         <bundle>mvn:com.fasterxml.jackson.module/jackson-module-guice/${jackson2.version}</bundle>
     </feature>
 
     <feature name="jackson-module-parameter-names" description="Jackson Module Parameter Names" version="${jackson2.version}" resolver="(obr)">
         <details>Add-on module for Jackson (http://jackson.codehaus.org) to support introspection of method/constructor parameter names, without having to add explicit property name annotation.</details>
-        <feature version="${jackson2.version}">jackson-databind</feature>
+        <feature>jackson-databind</feature>
         <bundle>mvn:com.fasterxml.jackson.module/jackson-module-parameter-names/${jackson2.version}</bundle>
     </feature>
 
     <feature name="jackson-module-paranamer" description="Jackson Module Paranamer" version="${jackson2.version}" resolver="(obr)">
-        <details>AnnotationIntrospectors that use Paranamer (http://paranamer.codehaus.org) to introspect names of constructor (and factory method) parameters.</details>
-        <feature version="${jackson2.version}">jackson-databind</feature>
+        <details>Annotation Introspectors that use Paranamer (http://paranamer.codehaus.org) to introspect names of constructor (and factory method) parameters.</details>
+        <feature>jackson-databind</feature>
         <feature>paranamer</feature>
         <bundle>mvn:com.fasterxml.jackson.module/jackson-module-paranamer/${jackson2.version}</bundle>
     </feature>
 
-    <feature name="jackson-dataformat-smile" description="Jackson Dataformat Smile" version="${jackson2.version}" resolver="(obr)">
+    <feature name="jackson-dataformat-smile" description="Jackson Dataformat Smile" version="${jackson2.dataformat.smile.version}" resolver="(obr)">
         <details>Support for reading and writing Smile ("binary JSON") encoded data using Jackson abstractions (streaming API, data binding, tree model)</details>
-        <feature version="${jackson2.version}">jackson-core</feature>
+        <feature>jackson-core</feature>
         <bundle>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-smile/${jackson2.dataformat.smile.version}</bundle>
     </feature>
 
     <feature name="jackson-dataformat-xml" description="Jackson Dataformat XML" version="${jackson2.version}" resolver="(obr)">
         <details>Data format extension for Jackson (http://jackson.codehaus.org) to offer alternative support for serializing POJOs as XML and deserializing XML as pojos. Support implemented on top of Stax API (javax.xml.stream), by implementing core Jackson Streaming API types like JsonGenerator, JsonParser and JsonFactory. Some data-binding types overridden as well (ObjectMapper sub-classed as XmlMapper).</details>
-        <feature version="${jackson2.version}">jackson-databind</feature>
+        <feature>jackson-databind</feature>
+        <feature>jackson-module-jaxb-annotations</feature>
+        <feature>woodstox</feature>
         <bundle>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2.version}</bundle>
+    </feature>
+
+    <feature name="jackson-dataformat-yaml" description="Jackson Dataformat YAML" version="${jackson2.version}" resolver="(obr)">
+        <details>Support for reading and writing YAML-encoded data via Jackson abstractions.</details>
+        <feature>jackson-databind</feature>
+        <bundle>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/${jackson2.version}</bundle>
+    </feature>
+
+    <feature name="jackson-dataformat-csv" description="Jackson Dataformat CSV" version="${jackson2.version}" resolver="(obr)">
+        <details>Support for reading and writing CSV-encoded data via Jackson abstractions.</details>
+        <feature>jackson-databind</feature>
+        <bundle>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-csv/${jackson2.version}</bundle>
+    </feature>
+
+    <feature name="jackson-dataformat-cbor" description="Jackson Dataformat CBOR" version="${jackson2.version}" resolver="(obr)">
+        <details>Support for reading and writing Concise Binary Object Representation ([CBOR](https://www.rfc-editor.org/info/rfc7049) encoded data using Jackson abstractions (streaming API, data binding, tree model)</details>
+        <feature>jackson-databind</feature>
+        <bundle>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/${jackson2.version}</bundle>
+    </feature>
+
+    <feature name="jackson-dataformat-avro" description="Jackson Dataformat Avro" version="${jackson2.version}" resolver="(obr)">
+        <details>Support for reading and writing AVRO-encoded data via Jackson abstractions.</details>
+        <feature>jackson-databind</feature>
+        <feature>avro</feature>
+        <bundle>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-avro/${jackson2.version}</bundle>
+    </feature>
+
+    <feature name="jackson-jaxrs-base" description="Jackson JAXRS Base" version="${jackson2.version}" resolver="(obr)">
+        <details>Pile of code that is shared by all Jackson-based JAX-RS providers.</details>
+        <feature>jackson-databind</feature>
+        <bundle>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${jackson2.version}</bundle>
+    </feature>
+
+    <feature name="jackson-jaxrs-json-provider" description="Jackson JAXRS JSON" version="${jackson2.version}" resolver="(obr)">
+        <details>Functionality to handle JSON input/output for JAX-RS implementations (like Jersey and RESTeasy) using standard Jackson data binding.</details>
+        <feature>jackson-jaxrs-base</feature>
+        <feature>jackson-module-jaxb-annotations</feature>
+        <bundle>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${jackson2.version}</bundle>
+    </feature>
+
+    <feature name="jackson-jaxrs-xml-provider" description="Jackson JAXRS XML" version="${jackson2.version}" resolver="(obr)">
+        <details>Functionality to handle XML input/output for JAX-RS implementations (like Jersey and RESTeasy) using standard Jackson data binding.</details>
+        <feature>jackson-jaxrs-base</feature>
+        <feature>jackson-dataformat-xml</feature>
+        <bundle>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-xml-provider/${jackson2.version}</bundle>
+    </feature>
+
+    <feature name="jackson-jaxrs-smile-provider" description="Jackson JAXRS Smile" version="${jackson2.version}" resolver="(obr)">
+        <details>Functionality to handle Smile (binary JSON) input/output for JAX-RS implementations (like Jersey and RESTeasy) using standard Jackson data binding.</details>
+        <feature>jackson-jaxrs-base</feature>
+        <feature>jackson-module-jaxb-annotations</feature>
+        <feature>jackson-dataformat-smile</feature>
+        <bundle>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-smile-provider/${jackson2.version}</bundle>
+    </feature>
+
+    <feature name="jackson-jaxrs-cbor-provider" description="Jackson JAXRS CBOR" version="${jackson2.version}" resolver="(obr)">
+        <details>Functionality to handle CBOR encoded input/output for JAX-RS implementations (like Jersey and RESTeasy) using standard Jackson data binding.</details>
+        <feature>jackson-jaxrs-base</feature>
+        <feature>jackson-module-jaxb-annotations</feature>
+        <feature>jackson-dataformat-cbor</feature>
+        <bundle>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-cbor-provider/${jackson2.version}</bundle>
+    </feature>
+
+    <feature name="jackson-jaxrs-providers" description="Jackson JAX RS" version="${jackson2.version}" resolver="(obr)">
+        <details>Parent for Jackson JAX-RS providers</details>
+        <feature>jackson-jaxrs-json-provider</feature>
+        <feature>jackson-jaxrs-xml-provider</feature>
+        <feature>jackson-jaxrs-smail-provider</feature>
+        <feature>jackson-jaxrs-cbor-provider</feature>
     </feature>
 
 </features>

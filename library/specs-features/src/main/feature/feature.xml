@@ -203,4 +203,10 @@
         <details>JSR305 Annotations for Findbugs</details>
         <bundle>mvn:org.apache.servicemix.bundels/org.apache.servicemix.bundels.jsr305/${jsr305.bundle.version}</bundle>
     </feature>
+
+    <feature name="stax2-api" description="Stax2 API" version="${stax2-api.version}" resolver="(obr)">
+        <details>tax2 API is an extension to basic Stax 1.0 API that adds significant new functionality, such as full-featured bi-direction validation interface and high-performance Typed Access API.</details>
+        <feature>stax-api-1.0</feature>
+        <bundle>mvn:org.codehaus.woodstox/stax2-api/${stax2-api.version}</bundle>
+    </feature>
 </features>

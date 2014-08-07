@@ -42,7 +42,16 @@
             ASM is an all purpose Java bytecode manipulation and analysis framework. It can be used to modify existing classes or dynamically generate classes, directly in binary form. Provided common transformations and analysis algorithms allow to easily assemble custom complex transformations and code analysis tools.
             ASM offer similar functionality as other bytecode frameworks, but it is focused on simplicity of use and performance. Because it was designed and implemented to be as small and as fast as possible, it makes it very attractive for using in dynamic systems.
         </details>
-        <bundle>mvn:org.ow2.asm/asm/${asm.version}</bundle>
+        <bundle>mvn:org.ow2.asm/asm-all/${asm.version}</bundle>
+    </feature>
+
+    <feature name="asm5" description="ASM: a code manipulation tool to implement adaptable systems" version="${asm5.version}"  resolver="(obr)">
+        <details>
+            url:http://asm.ow2.org/
+            ASM is an all purpose Java bytecode manipulation and analysis framework. It can be used to modify existing classes or dynamically generate classes, directly in binary form. Provided common transformations and analysis algorithms allow to easily assemble custom complex transformations and code analysis tools.
+            ASM offer similar functionality as other bytecode frameworks, but it is focused on simplicity of use and performance. Because it was designed and implemented to be as small and as fast as possible, it makes it very attractive for using in dynamic systems.
+        </details>
+        <bundle>mvn:org.ow2.asm/asm-all/${asm5.version}</bundle>
     </feature>
 
     <feature name="aspectj" description="AspectJ: a seamless aspect-oriented extension to Java" version="${aspectj.version}"  resolver="(obr)">

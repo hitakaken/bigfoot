@@ -278,7 +278,7 @@
         <dependency>
             <groupId>com.thoughtworks.paranamer</groupId>
             <artifactId>paranamer</artifactId>
-            <version>${thoughtworks.paranmaer.version}</version>
+            <version>${thoughtworks.paranamer.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -299,6 +299,19 @@
             <groupId>com.fasterxml.jackson.module</groupId>
             <artifactId>jackson-module-mrbean</artifactId>
             <version>${jackson2.version}</version>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.ow2.asm</groupId>
+                    <artifactId>asm</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm-all</artifactId>
+            <version>${asm5.version}</version>
+            <scope>provided</scope>
         </dependency>
         <!-- Jackson Module Guice -->
         <dependency>
@@ -362,6 +375,7 @@
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-smile</artifactId>
             <version>${jackson2.dataformat.smile.version}</version>
+            <scope>provided</scope>
         </dependency>
         <!-- Jackson Dataformat XML -->
         <dependency>
@@ -369,55 +383,116 @@
             <artifactId>jackson-dataformat-xml</artifactId>
             <version>${jackson2.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.codehaus.woodstox</groupId>
+            <artifactId>woodstox-core-asl</artifactId>
+            <version>${woodstox.version}</version>
+            <scope>provided</scope><exclusions>
+            <exclusion>
+                <groupId>javax.xml.stream</groupId>
+                <artifactId>stax-api</artifactId>
+            </exclusion>
+        </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicemix.specs</groupId>
+            <artifactId>org.apache.servicemix.specs.stax-api-1.0</artifactId>
+            <version>${servicemix.specs.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.woodstox</groupId>
+            <artifactId>stax2-api</artifactId>
+            <version>${stax2-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
         <!-- Jackson Dataformat YAML -->
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-yaml</artifactId>
             <version>${jackson2.version}</version>
+            <scope>provided</scope>
         </dependency>
         <!-- Jackson Dataformat CSV -->
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-csv</artifactId>
             <version>${jackson2.version}</version>
+            <scope>provided</scope>
         </dependency>
         <!-- Jackson Dataformat CBOR -->
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-cbor</artifactId>
             <version>${jackson2.version}</version>
+            <scope>provided</scope>
         </dependency>
         <!-- Jackson Dataformat Avro -->
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-avro</artifactId>
             <version>${jackson2.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.avro</artifactId>
+            <version>${apache.avro.bundle.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.xerial.snappy</groupId>
+            <artifactId>snappy-java</artifactId>
+            <version>${snappy-java.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-compress</artifactId>
+            <version>${apache.commons.compress.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.tukaani</groupId>
+            <artifactId>xz</artifactId>
+            <version>${xz.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- Jackson JAXRS -->
+        <!-- Jackson JAXRS Base -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+            <artifactId>jackson-jaxrs-base</artifactId>
+            <version>${jackson2.version}</version>
+            <scope>provided</scope>
+        </dependency>
         <!-- Jackson JAXRS JSON -->
         <dependency>
             <groupId>com.fasterxml.jackson.jaxrs</groupId>
             <artifactId>jackson-jaxrs-json-provider</artifactId>
             <version>${jackson2.version}</version>
+            <scope>provided</scope>
         </dependency>
         <!-- Jackson JAXRS XML -->
         <dependency>
             <groupId>com.fasterxml.jackson.jaxrs</groupId>
             <artifactId>jackson-jaxrs-xml-provider</artifactId>
             <version>${jackson2.version}</version>
-        </dependency>
-        <!-- Jackson JAXRS Base -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.jaxrs</groupId>
-            <artifactId>jackson-jaxrs-base</artifactId>
-            <version>${jackson2.version}</version>
+            <scope>provided</scope>
         </dependency>
         <!-- Jackson JAXRS Smile -->
         <dependency>
             <groupId>com.fasterxml.jackson.jaxrs</groupId>
             <artifactId>jackson-jaxrs-smile-provider</artifactId>
             <version>${jackson2.version}</version>
+            <scope>provided</scope>
         </dependency>
         <!-- Jackson JAXRS CBOR -->
         <dependency>
@@ -425,7 +500,6 @@
             <artifactId>jackson-jaxrs-cbor-provider</artifactId>
             <version>${jackson2.version}</version>
         </dependency>
-
 
     </dependencies>
     <build>

@@ -405,6 +405,14 @@
             <version>${jsr305.bundle.version}</version>
             <scope>provided</scope>
         </dependency>
+
+        <!-- Stax2 API -->
+        <dependency>
+            <groupId>org.codehaus.woodstox</groupId>
+            <artifactId>stax2-api</artifactId>
+            <version>${stax2-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>

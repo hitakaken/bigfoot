@@ -21,6 +21,21 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="
           http://karaf.apache.org/xmlns/features/v1.2.0 http://karaf.apache.org/xmlns/features/v1.2.0">
+    <feature name="snappy" description="snappy-java: A fast compression/decompression library" version="${snappy-java.version}" resolver="(obr)">
+        <bundle>mvn:org.xerial.snappy/snappy-java/${snappy-java.version}</bundle>
+    </feature>
+
+    <feature name="avro" description="" version="${apache.avro.version}" resolver="(obr)">
+        <feature>paranamer</feature>
+        <feature>snappy</feature>
+        <feature>commons-compress</feature>
+        <feature>xz</feature>
+        <feature>slf4j</feature>
+        <bundle>mvn:org.codehaus.jackson/jackson-core-asl/${jackson.version}</bundle>
+        <bundle>mvn:org.codehaus.jackson/jackson-mapper-asl/${jackson.version}</bundle>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.avro/${apache.avro.bundle.version}</bundle>
+    </feature>
+
     <feature name="ezmorph" description="Ezmorph: Simple java library for transforming an Object to another Object." version="${ezmorph.version}" resolver="(obr)">
         <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.ezmorph/${ezmorph.bundle.version}</bundle>
     </feature>
@@ -51,5 +66,9 @@
         <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.json-lib/${json-lib.bundle.version}</bundle>
     </feature>
 
-
+    <feature name="woodstox"  description="Woodstox" version="${woodstox.version}" resolver="(obr)">
+        <details>Woodstox is a high-performance XML processor that implements Stax (JSR-173) and SAX2 APIs</details>
+        <feature>stax2-api</feature>
+        <bundle>mvn:org.codehaus.woodstox/woodstox-core-asl/${woodstox.version}</bundle>
+    </feature>
 </features>
