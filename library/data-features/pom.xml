@@ -178,11 +178,19 @@
         <!-- Gson already in google-features -->
 
         <!-- XML -->
+        <!-- Crimson XML解析 -->
+        <dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.crimson</artifactId>
+            <version>${crimson.bundle.version}</version>
+            <scope>provided</scope>
+        </dependency>
         <!-- Dom4j XML解析 -->
         <dependency>
             <groupId>org.apache.servicemix.bundles</groupId>
             <artifactId>org.apache.servicemix.bundles.dom4j</artifactId>
             <version>${dom4j.bundle.version}</version>
+            <scope>provided</scope>
             <exclusions>
                 <exclusion>
                     <groupId>xml-apis</groupId>
@@ -195,6 +203,7 @@
             <groupId>org.apache.servicemix.bundles</groupId>
             <artifactId>org.apache.servicemix.bundles.jaxb-impl</artifactId>
             <version>${jaxb-impl.bundle.version}</version>
+            <scope>provided</scope>
             <exclusions>
                 <exclusion>
                     <groupId>javax.xml.stream</groupId>
@@ -224,6 +233,7 @@
             <groupId>org.jvnet.staxex</groupId>
             <artifactId>stax-ex</artifactId>
             <version>${stax-ex.version}</version>
+            <scope>provided</scope>
             <exclusions>
                 <exclusion>
                     <groupId>javax.xml.stream</groupId>
@@ -239,6 +249,7 @@
             <groupId>com.sun.xml.fastinfoset</groupId>
             <artifactId>FastInfoset</artifactId>
             <version>${fastinfoset.version}</version>
+            <scope>provided</scope>
         </dependency>
         <!-- Woodstox XML解析 -->
         <dependency>
@@ -261,38 +272,146 @@
         </dependency>
         <!-- Xalan XSLT -->
         <dependency>
-            <groupId>xalan</groupId>
-            <artifactId>xalan</artifactId>
-            <version>${xalan.version}</version>
-        </dependency>
+        <groupId>org.apache.servicemix.bundles</groupId>
+        <artifactId>org.apache.servicemix.bundles.xalan</artifactId>
+        <version>${xalan.bundle.version}</version>
+        <scope>provided</scope>
+        <exclusions>
+            <exclusion>
+                <groupId>xml-apis</groupId>
+                <artifactId>xml-apis</artifactId><!-- in Java 7 -->
+            </exclusion>
+            <exclusion>
+                <groupId>xalan</groupId>
+                <artifactId>serializer</artifactId><!-- in Java 7 -->
+            </exclusion>
+        </exclusions>
+    </dependency>
         <dependency>
             <groupId>org.apache.servicemix.bundles</groupId>
-            <artifactId>org.apache.servicemix.bundles.xalan</artifactId>
-            <version>${xalan.bundle.version}</version>
+            <artifactId>org.apache.servicemix.bundles.xalan-serializer</artifactId>
+            <version>${xalan-serializer.bundle.version}</version>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>xml-apis</groupId>
+                    <artifactId>xml-apis</artifactId><!-- in Java 7 -->
+                </exclusion>
+            </exclusions>
         </dependency>
         <!-- Xerces XML解析 -->
-        <dependency>
-            <groupId>org.apache.xerces</groupId>
-            <artifactId>xercesImpl</artifactId>
-            <version>${apache.xerces.version}</version>
-        </dependency>
         <dependency>
             <groupId>org.apache.servicemix.bundles</groupId>
             <artifactId>org.apache.servicemix.bundles.xerces</artifactId>
             <version>${xerces.bundle.version}</version>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>xml-apis</groupId>
+                    <artifactId>xml-apis</artifactId><!-- in Java 7 -->
+                </exclusion>
+            </exclusions>
         </dependency>
-        <dependency>
-            <groupId>org.apache.servicemix.bundles</groupId>
-            <artifactId>org.apache.servicemix.bundles.xstream</artifactId>
-            <version>${xstream.bundle.version}</version>
-        </dependency>
+        <!-- XmlResolver -->
         <dependency>
             <groupId>org.apache.servicemix.bundles</groupId>
             <artifactId>org.apache.servicemix.bundles.xmlresolver</artifactId>
             <version>${xmlresolver.bundle.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- XmlPull -->
+        <dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.xmlpull</artifactId>
+            <version>${xmlpull.bundle.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- XPP3 -->
+        <dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.xpp3</artifactId>
+            <version>${xpp3.bundle.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- xstream -->
+        <dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.xstream</artifactId>
+            <version>${xstream.bundle.version}</version>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>xmlpull</groupId>
+                    <artifactId>xmlpull</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>xpp3</groupId>
+                    <artifactId>xpp3_min</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- XML like -->
+        <!-- Atom 1.0 -->
+        <dependency>
+            <groupId>com.colorfulsoftware</groupId>
+            <artifactId>atomsphere</artifactId>
+            <version>${atomsphere.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- RSS 2.0 -->
+        <dependency>
+            <groupId>com.colorfulsoftware</groupId>
+            <artifactId>rsspect</artifactId>
+            <version>${rsspect.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- HTML -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>${jsoup.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.htmlparser.jericho</groupId>
+            <artifactId>jericho-html</artifactId>
+            <version>${jericho-html.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.jtidy</groupId>
+            <artifactId>jtidy</artifactId>
+            <version>${jtidy.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.nekohtml</groupId>
+            <artifactId>nekohtml</artifactId>
+            <version>${nekohtml.version}</version>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>xerces</groupId>
+                    <artifactId>xercesImpl</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.ccil.cowan.tagsoup</groupId>
+            <artifactId>tagsoup</artifactId>
+            <version>${tagsoup.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- YAML -->
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>${snakeyaml.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+
 
     </dependencies>
     <build>

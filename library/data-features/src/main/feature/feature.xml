@@ -66,6 +66,10 @@
         <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.json-lib/${json-lib.bundle.version}</bundle>
     </feature>
 
+    <feature name="crimson" description="Crimson" version="${crimson.version}" resolver="(obr)">
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.crimson/${crimson.bundle.version}</bundle>
+    </feature>
+
     <feature name="dom4j" description="Dom4j" version="${dom4j.version}" resolver="(obr)">
         <details>dom4j: the flexible XML framework for Java</details>
         <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.dom4j/${dom4j.bundle.version}</bundle>
@@ -94,4 +98,75 @@
         <feature>stax2-api</feature>
         <bundle>mvn:org.codehaus.woodstox/woodstox-core-asl/${woodstox.version}</bundle>
     </feature>
+
+    <feature name="xalan" description="Xalan Java" version="${xalan.version}" resolver="(obr)">
+        <details>Xalan-Java is an XSLT processor for transforming XML documents into HTML, text, or other XML document types. It implements XSL Transformations (XSLT) Version 1.0 and XML Path Language (XPath) Version 1.0 and can be used from the command line, in an applet or a servlet, or as a module in other program.</details>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xalan/${xalan.bundle.version}</bundle>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xalan-serializer/${xalan-serializer.bundle.version}</bundle>
+    </feature>
+
+    <feature name="xerces" description="Xerces2 J" version="${xerces.version}" resolver="(obr)">
+        <details>Xerces2 is the next generation of high performance, fully compliant XML parsers in the Apache Xerces family. This new version of Xerces introduces the Xerces Native Interface (XNI), a complete framework for building parser components and configurations that is extremely modular and easy to program. The Apache Xerces2 parser is the reference implementation of XNI but other parser components, configurations, and parsers can be written using the Xerces Native Interface. For complete design and implementation documents, refer to the XNI Manual. Xerces2 is a fully conforming XML Schema 1.0 processor. A partial experimental implementation of the XML Schema 1.1 Structures and Datatypes Working Drafts (December 2009) and an experimental implementation of the XML Schema Definition Language (XSD): Component Designators (SCD) Candidate Recommendation (January 2010) are provided for evaluation. For more information, refer to the XML Schema page. Xerces2 also provides a complete implementation of the Document Object Model Level 3 Core and Load/Save W3C Recommendations and provides a complete implementation of the XML Inclusions (XInclude) W3C Recommendation. It also provides support for OASIS XML Catalogs v1.1. Xerces2 is able to parse documents written according to the XML 1.1 Recommendation, except that it does not yet provide an option to enable normalization checking as described in section 2.13 of this specification. It also handles namespaces according to the XML Namespaces 1.1 Recommendation, and will correctly serialize XML 1.1 documents if the DOM level 3 load/save APIs are in use.</details>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xerces/${xerces.bundle.version}</bundle>
+    </feature>
+
+    <feature name="xmlresolver" description="Xmlresolver" version="${xmlresolver.version}" resolver="(obr)">
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xmlresolver/${xmlresolver.bundle.version}</bundle>
+    </feature>
+
+    <feature name="xmlpull" description="XML Pull Parsing API" version="${xmlpull.version}" resolver="(obr)">
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xmlpull/${xmlpull.bundle.version}</bundle>
+    </feature>
+
+    <feature name="xpp3" description="MXP1: Xml Pull Parser 3rd Edition (XPP3)" version="${xpp3.version}" resolver="(obr)">
+        <details>MXP1 is a stable XmlPull parsing engine that is based on ideas from XPP and in particular XPP2 but completely revised and rewritten to take the best advantage of latest JIT JVMs such as Hotspot in JDK 1.4+.</details>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xpp3/${xpp3.bundle.version}</bundle>
+    </feature>
+
+    <feature name="xstream" description="XStream Core" version="${xstream.version}" resolver="(obr)">
+        <feature>xmlpull</feature>
+        <feature>xpp3</feature>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xstream/${xstream.bundle.version}</bundle>
+    </feature>
+
+    <feature name="atomsphere" description="Atomsphere" version="${atomsphere.version}" resolver="(obr)">
+        <details>An Atom 1.0 feed library written in Java.</details>
+        <bundle>wrap:mvn:com.colorfulsoftware/atomsphere/${atomsphere.version}</bundle>
+    </feature>
+
+    <feature name="rsspect" description="RSSpect" version="${rsspect.version}" resolver="(obr)">
+        <details>A RSS 2.0 feed library written in Java on top of the Stax API.</details>
+        <bundle>wrap:mvn:com.colorfulsoftware/rsspect/${rsspect.version}</bundle>
+    </feature>
+
+    <feature name="jsoup" description="jsoup HTML parser" version="${jsoup.version}" resolver="(obr)">
+        <bundle>mvn:org.jsoup/jsoup/${jsoup.version}</bundle>
+    </feature>
+
+    <feature name="jericho-html" description="Jericho HTML Parser" version="${jericho-html.version}" resolver="(obr)">
+        <details>Jericho HTML Parser is a java library allowing analysis and manipulation of parts of an HTML document, including server-side tags, while reproducing verbatim any unrecognised or invalid HTML.</details>
+        <bundle>wrap:mvn:net.htmlparser.jericho/jericho-html/${jericho-html.version}</bundle>
+    </feature>
+
+    <feature name="jtidy" description="JTidy" version="${jtidy.version}" resolver="(obr)">
+        <details>JTidy is a Java port of HTML Tidy, a HTML syntax checker and pretty printer. Like its non-Java cousin, JTidy can be used as a tool for cleaning up malformed and faulty HTML. In addition, JTidy provides a DOM interface to the document that is being processed, which effectively makes you able to use JTidy as a DOM parser for real-world HTML.</details>
+        <bundle>wrap:mvn:net.sf.jtidy/nekohtml/${jtidy.version}</bundle>
+    </feature>
+
+    <feature name="nekohtml" description="Neko HTML" version="${nekohtml.version}" resolver="(obr)">
+        <details>An HTML parser and tag balancer.</details>
+        <feature>xerces</feature>
+        <bundle>wrap:mvn:net.sourceforge.nekohtml/nekohtml/${nekohtml.version}</bundle>
+    </feature>
+
+    <feature name="tagsoup" description="TagSoup" version="${tagsoup.version}" resolver="(obr)">
+        <details>TagSoup is a SAX-compliant parser written in Java that, instead of parsing well-formed or valid XML, parses HTML as it is found in the wild: poor, nasty and brutish, though quite often far from short. TagSoup is designed for people who have to process this stuff using some semblance of a rational application design. By providing a SAX interface, it allows standard XML tools to be applied to even the worst HTML. TagSoup also includes a command-line processor that reads HTML files and can generate either clean HTML or well-formed XML that is a close approximation to XHTML.</details>
+        <bundle>wrap:mvn:org.ccil.cowan.tagsoup/tagsoup/${tagsoup.version}</bundle>
+    </feature>
+
+    <feature name="snakeyaml" description="SnakeYAML" version="${snakeyaml.version}" resolver="(obr)">
+        <details>YAML 1.1 parser and emitter for Java</details>
+        <bundle>mvn:org.yaml/snakeyaml/${snakeyaml.version}</bundle>
+    </feature>
+
 </features>
