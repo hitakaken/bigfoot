@@ -66,6 +66,29 @@
         <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.json-lib/${json-lib.bundle.version}</bundle>
     </feature>
 
+    <feature name="dom4j" description="Dom4j" version="${dom4j.version}" resolver="(obr)">
+        <details>dom4j: the flexible XML framework for Java</details>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.dom4j/${dom4j.bundle.version}</bundle>
+    </feature>
+
+    <feature name="fastinfoset" description="Fastinfoset" version="${fastinfoset.version}" resolver="(obr)">
+        <bundle>mvn:com.sun.xml.fastinfoset/FastInfoset/${fastinfoset.version}</bundle>
+    </feature>
+
+    <feature name="stax-ex" description="Extensions to JSR-173 StAX API." version="${stax-ex.version}" resolver="(obr)">
+        <feature>stax-api-1.0</feature>
+        <feature>javax-activation</feature>
+        <bundle>wrap:mvn:org.jvnet.staxex/stax-ex/${stax-ex.version}</bundle>
+    </feature>
+
+    <feature name="jaxb-impl" description="Old JAXB Runtime" version="${jaxb-impl.version}" resolver="(obr)">
+        <details>Old JAXB Runtime module. Contains sources required for runtime processing.</details>
+        <feature>jaxb-api-2.2</feature>
+        <feature>fastinfoset</feature><!-- Optional -->
+        <feature>stax-ex</feature><!-- Optional -->
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jaxb-impl/${jaxb-impl.bundle.version}</bundle>
+    </feature>
+
     <feature name="woodstox"  description="Woodstox" version="${woodstox.version}" resolver="(obr)">
         <details>Woodstox is a high-performance XML processor that implements Stax (JSR-173) and SAX2 APIs</details>
         <feature>stax2-api</feature>

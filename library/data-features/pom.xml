@@ -98,8 +98,7 @@
             <version>${slf4j.version}</version>
             <scope>provided</scope>
         </dependency>
-        <!-- Apache Thrift -->
-
+        <!-- Thrift in network-features RPC section-->
         <!-- Google Protocol Buffers already in google-features -->
 
         <!-- Hessian -->
@@ -179,27 +178,63 @@
         <!-- Gson already in google-features -->
 
         <!-- XML -->
-        <dependency>
-            <groupId>org.apache.xerces</groupId>
-            <artifactId>xercesImpl</artifactId>
-            <version>${apache.xerces.version}</version>
-        </dependency>
+        <!-- Dom4j XML解析 -->
         <dependency>
             <groupId>org.apache.servicemix.bundles</groupId>
-            <artifactId>org.apache.servicemix.bundles.xstream</artifactId>
-            <version>${xstream.bundle.version}</version>
+            <artifactId>org.apache.servicemix.bundles.dom4j</artifactId>
+            <version>${dom4j.bundle.version}</version>
         </dependency>
+        <!-- Jaxb XML<==> Object -->
         <dependency>
             <groupId>org.apache.servicemix.bundles</groupId>
-            <artifactId>org.apache.servicemix.bundles.xmlresolver</artifactId>
-            <version>${xmlresolver.bundle.version}</version>
+            <artifactId>org.apache.servicemix.bundles.jaxb-impl</artifactId>
+            <version>${jaxb-impl.bundle.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.xml.stream</groupId>
+                    <artifactId>stax-api</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
-            <groupId>org.apache.servicemix.bundles</groupId>
-            <artifactId>org.apache.servicemix.bundles.xerces</artifactId>
-            <version>${xerces.bundle.version}</version>
+            <groupId>org.apache.servicemix.specs</groupId>
+            <artifactId>org.apache.servicemix.specs.jaxb-api-2.2</artifactId>
+            <version>${servicemix.specs.version}</version>
+            <scope>provided</scope>
         </dependency>
-        <!-- Woodstox -->
+        <dependency>
+            <groupId>${javax.activation.bundle.groudId}</groupId>
+            <artifactId>${javax.activation.bundle.artifactId}</artifactId>
+            <version>${javax.activation.bundle.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicemix.specs</groupId>
+            <artifactId>org.apache.servicemix.specs.stax-api-1.0</artifactId>
+            <version>${servicemix.specs.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jvnet.staxex</groupId>
+            <artifactId>stax-ex</artifactId>
+            <version>${stax-ex.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.xml.stream</groupId>
+                    <artifactId>stax-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javax.activation</groupId>
+                    <artifactId>activation</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.fastinfoset</groupId>
+            <artifactId>FastInfoset</artifactId>
+            <version>${fastinfoset.version}</version>
+        </dependency>
+        <!-- Woodstox XML解析 -->
         <dependency>
             <groupId>org.codehaus.woodstox</groupId>
             <artifactId>woodstox-core-asl</artifactId>
@@ -213,16 +248,42 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>org.apache.servicemix.specs</groupId>
-            <artifactId>org.apache.servicemix.specs.stax-api-1.0</artifactId>
-            <version>${servicemix.specs.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
             <groupId>org.codehaus.woodstox</groupId>
             <artifactId>stax2-api</artifactId>
             <version>${stax2-api.version}</version>
             <scope>provided</scope>
+        </dependency>
+        <!-- Xalan XSLT -->
+        <dependency>
+            <groupId>xalan</groupId>
+            <artifactId>xalan</artifactId>
+            <version>${xalan.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.xalan</artifactId>
+            <version>${xalan.bundle.version}</version>
+        </dependency>
+        <!-- Xerces XML解析 -->
+        <dependency>
+            <groupId>org.apache.xerces</groupId>
+            <artifactId>xercesImpl</artifactId>
+            <version>${apache.xerces.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.xerces</artifactId>
+            <version>${xerces.bundle.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.xstream</artifactId>
+            <version>${xstream.bundle.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.xmlresolver</artifactId>
+            <version>${xmlresolver.bundle.version}</version>
         </dependency>
 
         <!-- YAML -->
