@@ -183,6 +183,12 @@
             <groupId>org.apache.servicemix.bundles</groupId>
             <artifactId>org.apache.servicemix.bundles.dom4j</artifactId>
             <version>${dom4j.bundle.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>xml-apis</groupId>
+                    <artifactId>xml-apis</artifactId><!-- in Java 7 -->
+                </exclusion>
+            </exclusions>
         </dependency>
         <!-- Jaxb XML<==> Object -->
         <dependency>
