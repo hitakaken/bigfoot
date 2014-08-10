@@ -99,9 +99,8 @@
             <scope>provided</scope>
         </dependency>
         <!-- Thrift in network-features RPC section-->
-        <!-- Google Protocol Buffers already in google-features -->
-
-        <!-- Hessian -->
+        <!-- Google Protocol Buffers in google-features -->
+        <!-- Hessian in caucho-features -->
 
         <!-- Kryo -->
 
@@ -218,9 +217,9 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>${javax.activation.bundle.groudId}</groupId>
-            <artifactId>${javax.activation.bundle.artifactId}</artifactId>
-            <version>${javax.activation.bundle.version}</version>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-activation_1.1_spec</artifactId>
+            <version>${geronimo.activation-spec.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -246,9 +245,9 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>com.sun.xml.fastinfoset</groupId>
-            <artifactId>FastInfoset</artifactId>
-            <version>${fastinfoset.version}</version>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.fastinfoset</artifactId>
+            <version>${fastinfoset.bundle.version}</version>
             <scope>provided</scope>
         </dependency>
         <!-- Woodstox XML解析 -->

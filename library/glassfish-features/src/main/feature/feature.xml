@@ -16,43 +16,11 @@
       See the License for the specific language governing permissions and
       limitations under the License.
 -->
-<features name="library-network-features-${project.version}"
+<features name="library-glassfish-features-${project.version}"
           xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="
           http://karaf.apache.org/xmlns/features/v1.2.0 http://karaf.apache.org/xmlns/features/v1.2.0">
-    <feature name="httpcore" description="Apache HttpCore OSGi Bundle" version="${apache.httpcomonents.version}" resolver="(obr)">
-        <details>HttpComponents Core (OSGi bundle): Both blocking I/O and non-blocking I/O HttpComponents Core </details>
-        <bundle>mvn:org.apache.httpcomponents/httpcore-osgi/${apache.httpcomonents.version}</bundle>
-    </feature>
-    <feature name="httpclient" description="Apache HttpClient OSGi Bundle" version="${apache.httpcomonents.version}" resolver="(obr)">
-        <details>HttpComponents Client (OSGi bundle): httpcore,httpclient,httpmime,httpclient-cache,fluent-hc</details>
-        <feature>commons-logging</feature>
-        <bundle>mvn:org.apache.httpcomponents/httpclient-osgi/${apache.httpcomonents.version}</bundle>
-    </feature>
-    <feature name="httpasyncclient" description="HttpAsyncClient OSGi Bundle" version="${apache.httpasyncclient.version}" resolver="(obr)">
-        <details>HttpComponents AsyncClient (OSGi bundle)</details>
-        <feature>commons-logging</feature>
-        <feature>httpclient</feature>
-        <bundle>mvn:org.apache.httpcomponents/httpasyncclient-osgi/${apache.httpasyncclient.version}</bundle>
-    </feature>
-
-    <feature name="mimepull" description="MIME streaming extension" version="${mimepull.version" resolver="(obr)">
-        <details>Provides a streaming API to access attachments parts in a MIME message.</details>
-        <bundle>mvn:org.jvnet.mimepull/mimepull/${mimepull.version}</bundle>
-    </feature>
-
-    <feature name="saaj-impl" description="Saaj Impl " version="${saaj-impl.version}" resolver="(obr)">
-        <details>Open source Reference Implementation of JSR-67: SOAP with Attachments API for Java (SAAJ MR :1.3) </details>
-        <feature>saaj-api</feature>
-        <feature>mimepull</feature>
-        <feature>stax-ex</feature>
-        <feature>stax-api-1.0</feature>
-        <feature>javax-activation</feature>
-        <feature>saaj-api-1.3</feature>
-        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.saaj-impl/${saaj-impl.bundle.version}</bundle>
-    </feature>
-
     <feature name="glassfish-management-api" description="GlassFish Common APIs" version="${glassfish.management-api.version}" resolver="(obr)">
         <bundle>mvn:org.glassfish.external/management-api/${glassfish.management-api.version}</bundle>
     </feature>

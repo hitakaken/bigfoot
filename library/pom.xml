@@ -37,8 +37,12 @@
         <!-- Organization Classify -->
         <!-- Apache Commons-->
         <module>apache-commons-features</module>
-        <!-- Google Open Source Utilities-->
+        <!-- Caucho Projects -->
+        <module>caucho-features</module>
+        <!-- Google Projects -->
         <module>google-features</module>
+        <!-- Glassfish Projects -->
+        <module>glassfish-features</module>
         <!-- Jackson JSON Processor -->
         <module>jackson-features</module>
         <!-- Spring Projects -->

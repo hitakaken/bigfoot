@@ -13,7 +13,7 @@
     <artifactId>spring-features</artifactId>
     <packaging>pom</packaging>
     <name>Bigfoot Framework :: Library :: Spring Features</name>
-    <description>Data Format类库组件集合，提供来自SpringSource开源项目的Features</description>
+    <description>Spring Framework 类库组件集合，提供来自SpringSource开源项目的Features</description>
     <properties>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>

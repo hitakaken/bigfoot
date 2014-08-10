@@ -22,15 +22,18 @@
           xsi:schemaLocation="
           http://karaf.apache.org/xmlns/features/v1.2.0 http://karaf.apache.org/xmlns/features/v1.2.0">
     <feature name="javax-activation" description="Java Activation Spec API 1.1" version="${javax.activation.version}"  resolver="(obr)">
-        <bundle>mvn:${javax.activation.bundle.groupId}/${javax.activation.bundle.artifactId}/${javax.activation.bundle.version}</bundle>
-    </feature>
-
-    <feature name="javax-inject" description="This OSGi bundle wraps javax.inject 1 jar file." version="${javax.inject.version}"  resolver="(obr)">
-        <bundle>mvn:${javax.inject.bundle.groupId}/${javax.inject.bundle.artifactId}/${javax.inject.bundle.version}</bundle>
+        <bundle>mvn:org.apache.geronimo.specs/geronimo-activation_1.1_spec/${geronimo.activation-spec.version}</bundle>
     </feature>
 
     <feature name="javax-annotation" description="Annotation spec 1.1 API" version="${javax.annotation.version}"  resolver="(obr)">
-        <bundle>mvn:${javax.annotation.bundle.groupId}/${javax.annotation.bundle.artifactId}/${javax.annotation.bundle.version}</bundle>
+        <bundle>mvn:org.apache.geronimo.specs/geronimo-annotation_1.1_spec/${geronimo.annotation-spec.version}</bundle>
+    </feature>
+    <feature name="javax-annotation-1.2" description="Annotation spec 1.2 API" version="${javax.annotation.rc3.version}"  resolver="(obr)">
+        <bundle>mvn:javax.annotation/javax.annotation-api/${javax.annotation.rc3.version}</bundle>
+    </feature>
+
+    <feature name="javax-inject" description="This OSGi bundle wraps javax.inject 1 jar file." version="${javax.inject.version}"  resolver="(obr)">
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.javax-inject/${javax.inject.bundle.version}</bundle>
     </feature>
 
     <feature name="jpa" description="JSR 317 JPA 2.0 Spec API" version="${jpa.version}"  resolver="(obr)">
@@ -79,6 +82,9 @@
     </feature>
     <feature name="saaj-api-1.3" description="Apache ServiceMix :: Specs :: SAAJ API 1.3" version="${servicemix.specs.version}" resolver="(obr)">
         <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.saaj-api-1.3/${servicemix.specs.version}</bundle>
+    </feature>
+    <feature name="saaj-api" description="SAAJ API" version="${saaj-api.version}" resolver="(obr)">
+        <bundle>mvn:javax.xml.soap/javax.xml.soap-api/${saaj-api.version}</bundle>
     </feature>
     <feature name="stax-api-1.0" description="Apache ServiceMix :: Specs :: Stax API 1.0" version="${servicemix.specs.version}" resolver="(obr)">
         <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.stax-api-1.0/${servicemix.specs.version}</bundle>
@@ -165,7 +171,7 @@
         <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jain-sip-api-1.2/${servicemix.specs.version}</bundle>
     </feature>
     <feature name="jsr339-api-rc3" description="Apache ServiceMix :: Specs :: JSR 339 API M13" version="${servicemix.specs.version}" resolver="(obr)">
-        <bundle>mvn:javax.annotation/javax.annotation-api/${javax.annotation.rc3.version}</bundle>
+        <feature>javax-annotation-1.2</feature>
         <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jsr339-api-rc3/${servicemix.specs.version}</bundle>
     </feature>
     <feature name="jsr339-api-m13" description="Apache ServiceMix :: Specs :: JSR 339 API M13" version="${servicemix.specs.version}" resolver="(obr)">
@@ -221,6 +227,11 @@
     </feature>
     <feature name="servlet-api-2.4" description="Servlet 2.4 API" version="2.4" resolver="(obr)">
         <bundle>mvn:org.apache.geronimo.specs/geronimo-servlet_2.4_spec/${servlet-2.4.bundle.version}</bundle>
+    </feature>
+
+    <feature name="jsr181-api" description="JSR-181 Maintenance Release 1" version="${jsr181-api.version}" resolver="(obr)">
+        <details>Web Services Metadata for Java</details>
+        <bundle>wrap:mvn:javax.jws/jsr181-api/${jsr181-api.version}</bundle>
     </feature>
 
 </features>

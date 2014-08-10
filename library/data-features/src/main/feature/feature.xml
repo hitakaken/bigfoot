@@ -76,20 +76,20 @@
     </feature>
 
     <feature name="fastinfoset" description="Fastinfoset" version="${fastinfoset.version}" resolver="(obr)">
-        <bundle>mvn:com.sun.xml.fastinfoset/FastInfoset/${fastinfoset.version}</bundle>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.fastinfoset/${fastinfoset.bundle.version}</bundle>
     </feature>
 
     <feature name="stax-ex" description="Extensions to JSR-173 StAX API." version="${stax-ex.version}" resolver="(obr)">
         <feature>stax-api-1.0</feature>
         <feature>javax-activation</feature>
-        <bundle>wrap:mvn:org.jvnet.staxex/stax-ex/${stax-ex.version}</bundle>
+        <bundle>mvn:org.jvnet.staxex/stax-ex/${stax-ex.version}</bundle>
     </feature>
 
     <feature name="jaxb-impl" description="Old JAXB Runtime" version="${jaxb-impl.version}" resolver="(obr)">
         <details>Old JAXB Runtime module. Contains sources required for runtime processing.</details>
         <feature>jaxb-api-2.2</feature>
-        <feature>fastinfoset</feature><!-- Optional -->
-        <feature>stax-ex</feature><!-- Optional -->
+        <!--<feature>fastinfoset</feature>--><!-- Optional -->
+        <!--<feature>stax-ex</feature>--><!-- Optional -->
         <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jaxb-impl/${jaxb-impl.bundle.version}</bundle>
     </feature>
 

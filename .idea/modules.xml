@@ -6,8 +6,10 @@
       <module fileurl="file://$PROJECT_DIR$/application/application.iml" filepath="$PROJECT_DIR$/application/application.iml" />
       <module fileurl="file://$PROJECT_DIR$/assemblies/assemblies.iml" filepath="$PROJECT_DIR$/assemblies/assemblies.iml" />
       <module fileurl="file://$PROJECT_DIR$/bigfoot.iml" filepath="$PROJECT_DIR$/bigfoot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/caucho-features/caucho-features.iml" filepath="$PROJECT_DIR$/library/caucho-features/caucho-features.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/core-features/core-features.iml" filepath="$PROJECT_DIR$/library/core-features/core-features.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/data-features/data-features.iml" filepath="$PROJECT_DIR$/library/data-features/data-features.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/glassfish-features/glassfish-features.iml" filepath="$PROJECT_DIR$/library/glassfish-features/glassfish-features.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/google-features/google-features.iml" filepath="$PROJECT_DIR$/library/google-features/google-features.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/jackson-features/jackson-features.iml" filepath="$PROJECT_DIR$/library/jackson-features/jackson-features.iml" />
       <module fileurl="file://$PROJECT_DIR$/kernel/kernel.iml" filepath="$PROJECT_DIR$/kernel/kernel.iml" />

@@ -13,7 +13,7 @@
     <artifactId>nosql-features</artifactId>
     <packaging>pom</packaging>
     <name>Bigfoot Framework :: Library :: NoSql Features</name>
-    <description>常用 RDBMS 数据库驱动类库组件集合</description>
+    <description>常用 NoSql 数据库驱动类库组件集合</description>
     <properties>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>

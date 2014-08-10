@@ -13,7 +13,7 @@
     <artifactId>jackson-features</artifactId>
     <packaging>pom</packaging>
     <name>Bigfoot Framework :: Library :: Jackson Features</name>
-    <description>Data Format类库组件集合，提供Jackson数据解析、转换的Features</description>
+    <description>Jackson Framework类库组件集合，提供Jackson数据解析、转换的Features</description>
     <properties>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
@@ -240,7 +240,7 @@
         <dependency>
             <groupId>org.apache.geronimo.specs</groupId>
             <artifactId>geronimo-activation_1.1_spec</artifactId>
-            <version>${javax.activation.bundle.version}</version>
+            <version>${geronimo.activation-spec.version}</version>
             <scope>provided</scope>
         </dependency>
         <!-- Jackson Module JsonSchema -->
