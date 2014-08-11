@@ -13,7 +13,6 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.karaf.features:org.apache.karaf.features.core:3.0.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.geronimo.specs:geronimo-activation_1.1_spec:1.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.geronimo.specs:geronimo-annotation_1.1_spec:1.0.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.annotation:javax.annotation-api:1.2-b02" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.servicemix.bundles:org.apache.servicemix.bundles.javax-inject:1_2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.geronimo.specs:geronimo-jpa_2.0_spec:1.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.resource:connector-api:1.5" level="project" />
@@ -26,7 +25,6 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.json:javax.json-api:1.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.servicemix.specs:org.apache.servicemix.specs.jbi-api-1.0:2.4.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.servicemix.specs:org.apache.servicemix.specs.saaj-api-1.3:2.4.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.xml.soap:javax.xml.soap-api:1.3.7" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.servicemix.specs:org.apache.servicemix.specs.stax-api-1.0:2.4.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.servicemix.specs:org.apache.servicemix.specs.jaxb-api-2.1:2.4.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.servicemix.specs:org.apache.servicemix.specs.jaxb-api-2.2:2.4.0" level="project" />
@@ -52,6 +50,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.servicemix.specs:org.apache.servicemix.specs.jain-sip-api-1.2:2.4.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.sip:jain-sip-api:1.2.1.4" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.servicemix.specs:org.apache.servicemix.specs.jsr339-api-rc3:2.4.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.annotation:javax.annotation-api:1.2-b02" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.servicemix.specs:org.apache.servicemix.specs.jsr339-api-m13:2.4.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.servicemix.specs:org.apache.servicemix.specs.jcr-api-2.0:2.4.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.jcr:jcr:2.0" level="project" />
@@ -69,7 +68,6 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.geronimo.specs:geronimo-servlet_3.0_spec:1.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.geronimo.specs:geronimo-servlet_2.5_spec:1.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.geronimo.specs:geronimo-servlet_2.4_spec:1.1.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.jws:jsr181-api:1.0-MR1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.11" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.easymock:easymock:3.2" level="project" />
